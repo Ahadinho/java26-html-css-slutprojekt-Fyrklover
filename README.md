@@ -1,3 +1,3 @@
 # Fyrklöver
-Medlemmar : Ahad, Younis, Johanna, Arslan
+Medlemmar : Ahad, Yoonis, Johanna, Arslan
 
