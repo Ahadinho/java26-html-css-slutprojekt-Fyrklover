@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*This where the Header is styled*/
+.header {
+    background-color: #6a4207e8;
+    padding: 20px;
+    text-align: center;
+}
+
+/*This where the Main is styled*/
+.main {
+    margin-bottom: 60px; /* Adjust this value based on the height of your footer */
+}
+
+/*This where the footer is styled*/
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
