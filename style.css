@@ -7,9 +7,18 @@ body {
 
 /*This where the Header is styled*/
 .header {
-    background-color: #6a4207e8;
+    background-color: #020202e8;
     padding: 20px;
     text-align: center;
+}
+
+/*This where the Navigation is styled*/
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fffafa;
 }
 
 /*This where the Main is styled*/
