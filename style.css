@@ -1,6 +1,4 @@
 
-/* ==================== GRUNDINSTÄLLNINGAR ==================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +13,6 @@ body {
 }
 
 
-/* ==================== HEADER ==================== */
 
 /* This is where the Header is styled */
 
@@ -86,7 +83,7 @@ body {
 }
 
 
-/* ==================== NAVBAR ==================== */
+/* navbar */
 
 /* This is where the Navigation is styled */
 
@@ -135,7 +132,7 @@ body {
 }
 
 
-/* ==================== DROPDOWN ==================== */
+/* dropdown */
 
 /* Blommor-knappens behållare */
 
@@ -188,7 +185,7 @@ body {
 }
 
 
-/* ==================== HAMBURGARMENY ==================== */
+/* hamburgarmeny */
 
 /* Dold på stora skärmar */
 
@@ -201,7 +198,7 @@ body {
 }
 
 
-/* ==================== MAIN ==================== */
+/* main */
 
 /* This is where the Main is styled */
 
@@ -213,7 +210,7 @@ body {
 }
 
 
-/* ==================== FOOTER ==================== */
+/* footer */
 
 /* This is where the footer is styled */
 
@@ -228,9 +225,19 @@ body {
 }
 
 
-/* ==================== MOBILANPASSNING ==================== */
+/* mobilanpassning */
 
 @media (max-width: 768px) {
+
+    /* header mobil */
+
+    /* NYTT - anpassar header-top på mobil */
+
+    .header-top {
+        padding: 10px;
+        gap: 10px;
+    }
+
 
     /* Mindre bilder i headern */
 
@@ -260,7 +267,19 @@ body {
     }
 
 
-    /* ==================== HAMBURGARMENY MOBIL ==================== */
+    /* NYTT - sociala medier på mobil */
+
+    .sociala-medier {
+        gap: 5px;
+    }
+
+    .sociala-medier img {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* hamburgarmeny mobil */
 
     /* Visar hamburgarikonen */
 
