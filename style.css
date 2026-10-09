@@ -7,25 +7,25 @@ body {
 
 /*This where the Header is styled*/
 .header {
-    background-color: #020202e8;
+    background-color: #020202;
     padding: 20px 0 0;
     text-align: center;
 }
 
 .interflora-link img{
-    width: 50px;
+    width: 150px;
     height: auto;
     margin-right: 10px;
 }
 
 .logo img {
-    width: 30px;
+    width: 150px;
     height: auto;
     margin-right: 10px;
 }
 
 .facebook-link img, .instagram-link img {
-    width: 10px;
+    width: 50px;
     height: auto;
     margin-right: 6px;
 }
