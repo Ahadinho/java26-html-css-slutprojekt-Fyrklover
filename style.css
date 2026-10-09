@@ -8,30 +8,62 @@ body {
 /*This where the Header is styled*/
 .header {
     background-color: #020202e8;
-    padding: 20px;
+    padding: 20px 0 0;
     text-align: center;
 }
 
+.interflora-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.facebook-logo, .instagram-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 6px;
+}
+
 /*This where the Navigation is styled*/
+.nav {
+    background-color: #fffafa;
+}
+
 .nav ul {
-    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #fffafa;
+}
+
+.nav a {
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #d6d0d0;
+    color: #000;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #f2f2f2;
 }
 
 /*This where the Main is styled*/
 .main {
-    margin-bottom: 60px; /* Adjust this value based on the height of your footer */
+    min-height: 130vh;
+    background-image: url("13A8F2E5-83CE-402E-BEAA-ED2DE3B744DF.webp");
+    background-size: cover;
+    background-position: center;
 }
 
 /*This where the footer is styled*/
 .footer {
-    background-color: #f1f1f1;
-    padding: 20px;
+    color: linear-gradient(to bottom, #fefcfc, #656565);
+    padding: 5px;
     text-align: center;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
