@@ -1,4 +1,12 @@
 
+/* ==================== GRUNDINSTÄLLNINGAR ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,17 +14,45 @@ body {
     box-sizing: border-box;
 }
 
-/*This where the Header is styled*/
+
+/* ==================== HEADER ==================== */
+
+/* This is where the Header is styled */
+
 .header {
     background-color: #020202;
     padding: 20px 0 0;
     text-align: center;
+
+    /* NYTT - placerar bilderna i tre kolumner */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
 }
 
-.interflora-link img{
+
+/* Interflora till vänster */
+
+.interflora-link {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin-left: 30px;
+}
+
+.interflora-link img {
     width: 150px;
     height: auto;
     margin-right: 10px;
+}
+
+
+/* Iris-loggan i mitten */
+
+.logo {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
 }
 
 .logo img {
@@ -25,85 +61,9 @@ body {
     margin-right: 10px;
 }
 
-.facebook-link img, .instagram-link img {
-    width: 50px;
-    height: auto;
-    margin-right: 6px;
-}
 
-/*This where the Navigation is styled*/
-.nav {
-    background-color: #fffafa;
-}
+/* Sociala medier till höger */
 
-.nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav a {
-    display: block;
-    padding: 8px 12px;
-    border: 1px solid #d6d0d0;
-    color: #000;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #f2f2f2;
-}
-
-/*This where the Main is styled*/
-.main {
-    min-height: 130vh;
-    background-image: url("images/1. startsida/startsida.bakgrund.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-/*This where the footer is styled*/
-.footer {
-    color: linear-gradient(to bottom, #fefcfc, #656565);
-    padding: 5px;
-    text-align: center;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-
-/* ==============================================
-   NYTT - PLACERING AV BILDERNA I HEADERN
-   ============================================== */
-
-/* Skapar tre lika breda kolumner */
-.header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-}
-
-/* Interflora längst till vänster */
-.interflora-link {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: start;
-    margin-left: 30px;
-}
-
-/* Iris-loggan exakt i mitten */
-.logo {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
-}
-
-/* Facebook och Instagram till höger */
 .facebook-link {
     grid-column: 3;
     grid-row: 1;
@@ -118,19 +78,161 @@ nav a:hover {
     margin-right: 30px;
 }
 
-/* Navbar ska ligga under bilderna */
+.facebook-link img,
+.instagram-link img {
+    width: 50px;
+    height: auto;
+    margin-right: 6px;
+}
+
+
+/* ==================== NAVBAR ==================== */
+
+/* This is where the Navigation is styled */
+
 .nav {
+    background-color: #fffafa;
+    position: relative;
+    z-index: 10;
+
+    /* NYTT - navbar på egen rad under loggorna */
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
 }
 
 
-/* ==============================================
-   NYTT - MOBILANPASSNING AV HEADERN
-   ============================================== */
+/* Huvudmenyn */
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Länkarna */
+
+.nav a {
+    display: block;
+    padding: 8px 12px;
+
+    border: 1px solid #d6d0d0;
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Hover på länkar */
+
+.nav a:hover {
+    background-color: #f2f2f2;
+}
+
+
+/* ==================== DROPDOWN ==================== */
+
+/* Blommor-knappens behållare */
+
+.dropdown {
+    position: relative;
+}
+
+
+/* Undermenyn */
+
+.nav .dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 180px;
+
+    background-color: white;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid #d6d0d0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Visar undermenyn när musen är över Blommor */
+
+.nav .dropdown:hover .dropdown-menu,
+.nav .dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+
+/* Länkar i dropdown */
+
+.dropdown-menu a {
+    padding: 12px 15px;
+}
+
+
+/* Hover i dropdown */
+
+.dropdown-menu a:hover {
+    background-color: #eeeeee;
+}
+
+
+/* ==================== HAMBURGARMENY ==================== */
+
+/* Dold på stora skärmar */
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+/* ==================== MAIN ==================== */
+
+/* This is where the Main is styled */
+
+.main {
+    min-height: 130vh;
+    background-image: url("images/1. startsida/startsida.bakgrund.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+/* This is where the footer is styled */
+
+.footer {
+    color: white;
+    background: linear-gradient(to bottom, #020202, #656565);
+    padding: 5px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* ==================== MOBILANPASSNING ==================== */
 
 @media (max-width: 768px) {
+
+    /* Mindre bilder i headern */
 
     .interflora-link {
         margin-left: 10px;
@@ -156,4 +258,54 @@ nav a:hover {
     .instagram-link img {
         width: 25px;
     }
+
+
+    /* ==================== HAMBURGARMENY MOBIL ==================== */
+
+    /* Visar hamburgarikonen */
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: black;
+    }
+
+
+    /* Döljer huvudmenyn */
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+    }
+
+
+    /* Visar huvudmenyn när hamburgaren klickas */
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+
+    /* Visar blomkategorierna i mobilmenyn */
+
+    .nav .dropdown-menu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-left: 20px;
+    }
+
+
+    /* Större klickytor på mobilen */
+
+    .nav a {
+        padding: 12px 20px;
+    }
+
 }
