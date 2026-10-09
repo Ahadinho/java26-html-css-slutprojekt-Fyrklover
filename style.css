@@ -13,13 +13,13 @@ body {
 }
 
 .interflora-logo {
-    width: 100px;
+    width: 10%;
     height: auto;
     margin-right: 10px;
 }
 
 .facebook-logo, .instagram-logo {
-    width: 70px;
+    width: 10%;
     height: 70px;
     margin-right: 6px;
 }
