@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
+
 <head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
     <meta charset="UTF-8">
+
+    <!-- Gör sidan anpassad för mobila enheter -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Startsida</title>
+
+    <!-- kopplar html till css -->
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-    <header>
-        <nav>
+
+    <!-- ======== Header ======== -->
+
+    <header class ="header">
+
+        <!-- samarbetspartners logga och länk -->
+
+        
+        <a href="https://www.interflora.se/" target="_blank" class="interflora-link">
+            <img src="images/1. startsida/interflora.logga.avif" alt="Interflora">
+        </a>
+
+        <!-- Logga -->
+        <div class="logo">
+            <img src="images/Logga.png" alt="Logga för Iris Blommor">
+        </div>
+
+        <!-- sociala medier öppnas i ny flik -->
+        <a href="https://www.facebook.com/p/Arl%C3%B6vs-Blomsterhandel-61556911313052/" target="_blank" class="facebook-link">
+            <img src="images/1. startsida/facebook.icon.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/arlovsblomsterhandel/" target="_blank" class="instagram-link">
+            <img src="images/1. startsida/instagram.icon.png" alt="Instagram">
+        </a>
+
+        <!-- Navigationsmeny -->
+        <nav class="nav">
             <ul>
-                <li><a href="index.html">Startsida</a></li>
+                <li><a aria-current="page" href="index.html">Startsida</a></li>
                 <li><a href="Galleri.html">Galleri</a></li>
                 <li><a href="Kontakt.html">Kontakt</a></li>
+                <li><a href="https://www.interflora.se/" target="_blank">Interflora</a></li>
                 <li><a href="Beställ.html">Beställ</a></li>
                 <li><a href="Bröllop.html">Bröllop</a></li>
-                <li><a aria-current="page" href="Födelsedag.html">Födelsedag</a></li>
+                <li><a href="Födelsedag.html">Födelsedag</a></li>
                 <li><a href="Begravning.html">Begravning</a></li>
             </ul>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+    </main>
+    <footer class="footer">
+        Kotaktinformation:
+        <address>Iris Blommor, Storgatan 123, 12345 Stad</address>
+        <p>Telefon: 012-3456789</p>
+        <p>&copy; 2026 Iris AB. Alla rättigheter reserverade.</p>
+    </footer>
 </body>
 </html>
