@@ -472,3 +472,23 @@ body {
     z-index: 2;
 }
 
+/* ----------- Kategoribilder mobil ----------- */
+
+@media (max-width: 768px) {
+    .kategorier {
+        gap: 15px;
+        padding: 30px 10px;
+    }
+
+    .kategori {
+        width: 140px;
+    }
+
+    .kategori img {
+        height: 110px;
+    }
+
+    .kategori:hover, .kategori:focus-visable {
+        transform: scale(1.1);
+    }
+}
