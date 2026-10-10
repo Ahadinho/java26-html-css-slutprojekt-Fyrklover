@@ -417,3 +417,58 @@ body {
         padding: 10px;
     }
 }
+
+/* ----------- kategoribilder i blommor ----------- */
+
+/* placerar bilderna bredvid varandra */
+
+.kategorier {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 50px 20px;
+}
+
+/* varje kategoriruta */
+.kategori {
+    display: block;
+    width: 180px;
+
+    background-color: white;
+    border: 2px solid black;
+
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    transition: transform 0.3s ease;
+}
+
+/* kategori bilderna */
+.kategori img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* svart textruta under bilderna */
+.kategori p {
+    background-color: black;
+    color: white;
+
+    padding: 10px;
+    font.size: 18px;
+    margin: 0;
+    border-top: 2px solid black;
+}
+
+/* hover effekt på kategorirutor */
+.kategori:hover {
+    transform: scale(1.25);
+    z-index: 2;
+}
+
