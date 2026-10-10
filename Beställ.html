@@ -84,7 +84,36 @@
     </ul>
 </nav>
     </header>
-    <main>
+    <main class="bestall-main">
+        <form class="bestall-form">
+            <h1>Beställning</h1>
+
+            <!-- Kontaktuppgifter -->
+             <label for="namn">Beställarens namn: </label>
+             <input type="text" id="namn" name="namn" required>
+
+             <label for="telefonnummer">Telefonnummer: </label>
+             <input type="tel" id="telefonnummer" name="telefonnummer" required>
+
+             <label for="epost">E-postadress: </label>
+             <input type="email" id="epost" name="epost" required>
+
+            <!--Kundtyp-->
+            <div class="form-grupp">
+                <label>
+                    <input type="radio" name="kundtyp" value="privatkund" required>
+                    Privatkund
+                </label>
+                <label>
+                    <input type="radio" name="kundtyp" value="företagskund" required>
+                    Företagskund
+                </label>
+            </div>
+
+            <!-- leverans eller hämtning -->
+             
+
+        </form>
     </main>
     <footer class="footer">
         Kotaktinformation:
