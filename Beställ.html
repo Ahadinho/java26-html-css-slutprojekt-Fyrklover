@@ -111,8 +111,43 @@
             </div>
 
             <!-- leverans eller hämtning -->
-             
+             <div class="form-grupp">
+                <label>
+                    <input type="radio" name="leverans" value="hamtas" required>
+                    Hämtas
+                </label>
+                <label>
+                    <input type="radio" name="leverans" value="bud" required>
+                    Bud (tillkommer extra kostnad)
+                </label>
+             </div>
 
+             <!-- kort -->
+              <div class="form-grupp">
+                <label>
+                    <input type="radio" name="kort" value="kort" required>
+                    Kort medföljer
+                </label>
+                <label>
+                    <input type="radio" name="kort" value="Finare-kort" required>
+                    Finare kort +13kr
+                </label>
+              </div>
+
+            <!-- text på kort -->
+             <label for="korttext">Text på kort</label>
+             <input type="text" id="korttext" name="korttext">
+
+            <!-- beskrivning av beställningen -->
+             <label for="beskrivning">Beskrivning av beställningen</label>
+             <textarea id="beskrivning" name="beskrivning" rows="5" required></textarea>
+
+            <!-- notering -->
+             <label  for="notering">Andra önskemål</label>
+             <textarea id="notering" name="notering" rows="3"></textarea>
+
+            <!-- Skicka -->
+             <button type="submit">Skicka in</button> 
         </form>
     </main>
     <footer class="footer">
