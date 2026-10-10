@@ -328,3 +328,92 @@ body {
     }
 
 }
+
+
+/* -----------BESTÄLLNINGSIDA ----------- */
+
+.bestall-main {
+    min-height: 100vh;
+    background-color: white;
+    padding: 30px 20px 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bestall-form {
+    width: 100%;
+    max-width: 400px;
+
+    border: 2px solid black;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.bestall-form h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.bestall-form label {
+    font-size: 16px;
+}
+
+.bestall-form > input,
+.bestall-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.form-grupp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 12px 0;
+}
+
+.form-grupp label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notering {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bestall-form button {
+    background-color: #020202;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bestall-form button:hover {
+    background-color: #555;
+}
+
+
+/* ----------- Beställning mobil ----------- */
+
+@media (max-width: 768px) {
+    .bestall-main {
+        padding: 20px 10px 40px;
+    }
+
+    .bestall-form {
+        padding: 10px;
+    }
+}
