@@ -492,3 +492,144 @@ body {
         transform: scale(1.1);
     }
 }
+
+/* ----------- Begravningssidan ----------- */
+
+.begravning-main {
+    background-color: white;
+    min-height: 100vh;
+    padding: 30px 25px 60px;
+}
+
+/* rubriken */
+.begravning_main h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+.begravning-intro {
+    font-size: 14px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+/* kategorier */
+
+/* sju lodräta kolumner */
+
+.begravning-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+/* varje kategori */
+
+.begravning-kategori {
+    min-width: 0;
+    padding: 0 8px;
+    border-right: 1px solid black;
+}
+
+.begravning-kategori:last-child {
+    border-right: none;
+}
+
+/* huvudbilder */
+
+/* fyrkantiga bilder */
+
+.begravning-huvudbild {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+/* kategorinamn och pris */
+
+.begravning-kategori h2 {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.begravning-kategori p {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* exempelbilder */
+
+.begravning-bilder {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* beställ knapp */
+
+.begravning-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.begravning-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.begravning-bestall a:hover {
+    background-color: #555;
+}
+
+/* mobilanpassning */
+
+/* surfplatta */
+@media (max-width: 1000px) {
+    .begravning-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap:25px 10px
+    }
+}
+
+/* mobil */
+@media (max-width: 600px) {
+    .begravning-main {
+        padding: 20px 15px 40px;
+    }
+
+    .begravning-main h1 {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .begravning-intro {
+        margin-left: 0;
+    }
+
+    .begravning-grid {
+        grid-template-columns: repeat(2, minmax(0. 1fr));
+    }
+}
+
+/* mycket små mobiler */
+@media (max-width: 400px) {
+    .begravning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .begravning-bilder {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
