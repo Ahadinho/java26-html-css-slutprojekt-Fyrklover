@@ -21,7 +21,7 @@ body {
     padding: 20px 0 0;
     text-align: center;
 
-    /* NYTT - placerar bilderna i tre kolumner */
+    /* placerar bilderna i tre kolumner */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -92,7 +92,7 @@ body {
     position: relative;
     z-index: 10;
 
-    /* NYTT - navbar på egen rad under loggorna */
+    /* navbar på egen rad under loggorna */
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
@@ -631,5 +631,100 @@ body {
     .begravning-bilder {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ---------- Födelsedagssida ----------- */
+
+.fodelsedag-main {
+    background-color: white;
+    min-height: 100vh;
+    padding: 30px 25px 60px;
+}
+
+/* titel och beskrivande text */
+
+.fodelsedag-main h1 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+}
+
+.fodelsedag-info {
+    max-width: 850px;
+}
+
+.fodelsedag-info p {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom:10px;
+}
+
+/* Bilder */
+
+.fodelsedag-bilder {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fodelsedag-bilder img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+/* beställ kapp */
+
+.fodelsedag-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px
+}
+
+.fodelsedag-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.fodelsedag-bestall a:hover {
+    background-color: #555;
+}
+
+@media (max-width: 600px) {
+    .fodelsedag-main {
+        padding: 20px 15px 40px;
+    }
+
+    .fodelsedag-main h1 {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .fodelsedag info p {
+        font-size: 15px;
+    }
+
+    .fodelsedag-bilder {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .fodelsedag-bilder {
+        grid-template-columns: 1fr;
     }
 }
