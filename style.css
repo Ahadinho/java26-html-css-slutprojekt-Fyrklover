@@ -788,3 +788,83 @@ body {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
+.brollop-kategori p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* exempelbilder */
+
+.bollop-bilder {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.brollop-bilder img {
+    width: 100%;
+}
+
+/* Beställ knapp */
+
+.brollop-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.brollop-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.brollop-bestall a:hover {
+    background-color: #555;
+}
+
+/* mobil anpassning för bröllop */
+
+@media (max-width: 1000px) {
+
+    .brollop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 10px;
+    }
+
+    .brollop-kategori {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .brollop-main {
+        padding: 20px 15px 40px;
+    }
+
+    .brollop-main h1 {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .brollop-intro {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .brollop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brollop-bilder {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
