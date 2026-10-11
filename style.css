@@ -868,3 +868,77 @@ body {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+
+/* ----------- Annatsida ----------- */
+
+.annat-main {
+    background-color: white;
+    min-height: 100vh;
+    padding:30px 25px 60px;
+}
+
+/* rubrik */
+
+.annat-main h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+.annat-intro {
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+/* fem lodräta kategorier */
+
+.annat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.annat-kategori {
+    min-width: 0;
+    padding: 0 8px;
+    border-right: 1px solid black;
+}
+
+.annat-kategori:last-child {
+    border-right: none;
+}
+
+/* huvudbilder */
+
+.annat-huvudbild {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+/* kategorinamn och pris */
+
+.annat-kategori h2 {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.annat-kategori p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* exempelbilder */
+
+.annat-bilder {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
