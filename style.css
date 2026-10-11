@@ -796,14 +796,10 @@ body {
 
 /* exempelbilder */
 
-.bollop-bilder {
+.brollop-bilder {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.brollop-bilder img {
-    width: 100%;
 }
 
 /* Beställ knapp */
@@ -941,4 +937,71 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+/* Beställknapp */
+
+.annat-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.annat-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.annat-bestall a:hover {
+    background-color: #555;
+}
+
+/* mobilanpassning för annat sidan */
+
+@media (max-width: 1000px) {
+
+    .annat-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 10px;
+    }
+
+    .annat-kategori {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .annat-main {
+        padding: 20px 15px 40px;
+    }
+
+    .annat-main h1 {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .annat-intro {
+        margin-left: 0;
+    }
+
+    .annat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+
+    .annat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .annat-bilder {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
