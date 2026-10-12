@@ -203,13 +203,21 @@ body {
 /* This is where the Main is styled */
 
 .main {
-    min-height: 130vh;
     background-image: url("images/1. startsida/startsida.bakgrund.webp");
     background-size: cover;
     background-position: center;
+    min-height: 130vh;
+    padding: 20px;
+
 }
 
-
+.main-content {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 7px;
+    text-align: center;
+}
 /* footer */
 
 /* This is where the footer is styled */
