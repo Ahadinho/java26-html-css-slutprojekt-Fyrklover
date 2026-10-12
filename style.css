@@ -211,12 +211,49 @@ body {
 
 }
 
-.main-content {
+.home-Backgroundimg {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns:2, 1fr;
+    gap: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.background-picture img
+
+.main content {
+    margin: 7px;
+}
+.main-content, .insta-gallery, .open-hours, .find-us {
     background-color: white;
     color: black;
     padding: 20px;
-    margin: 7px;
     text-align: center;
+}
+
+.insta-photos, .home-info {
+    display: flex;
+    gap: 10px;
+}
+
+.insta-photos img {
+    width: 100px;
+}
+
+.open-hours, .find-us {
+    flex:1;
+}
+.open-hours table, .find-us iframe {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .home-info,  
+    .insta-photos {
+        flex-direction: column;
+    }
 }
 /* footer */
 
