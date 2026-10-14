@@ -448,10 +448,47 @@ body {
     width: 100%;
 }
 
+/*This is where the Gallery is styled*/
+
+main {
+    padding-top: 28px;
+    padding-bottom: 30px;
+}
+
+main .Galleri-bilder {
+    max-width: 1200px;
+    margin: 18px auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    grid-auto-flow: dense;
+}
+
+main .Galleri-bilder img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+main .Galleri-bilder .gallery-feature {
+    grid-column: span 1;
+    height: 360px;
+}
 
 /* mobilanpassning */
 
 @media (max-width: 768px) {
+    main .Galleri-bilder {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main .Galleri-bilder .gallery-feature {
+        grid-column: span 1;
+        height: 260px;
+    }
 
     /* header mobil */
 
