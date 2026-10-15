@@ -1252,3 +1252,61 @@ main .Galleri-bilder .gallery-feature {
 
 }
 
+
+/* Stor bild på Blommor-sidan */
+.blommor-hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.blommor-hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blommor-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 25px;
+    text-align: center;
+}
+
+/* Bakgrundsbild bakom beställningsformuläret */
+.bestall-main {
+    background-image: url("images/1. startsida/startsida.bakgrund.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bestall-form {
+    background-color: white;
+}
+
+/* Tangentbordsstöd för hamburgarmenyn */
+#menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+#menu-toggle:focus-visible + .hamburger {
+    outline: 3px solid #b88656;
+    outline-offset: 4px;
+}
+
+/* Större bild på större skärmar */
+@media (min-width: 768px) {
+    .blommor-hero {
+        height: 450px;
+    }
+}
