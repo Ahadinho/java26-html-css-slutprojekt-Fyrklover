@@ -1374,3 +1374,184 @@ main .Galleri-bilder .gallery-feature {
         height: 450px;
     }
 }
+
+
+/* =====================================
+   KONTAKTSIDA
+   ===================================== */
+
+/* Tar bort extra utrymme ovanför bannern */
+.kontakt-main {
+    padding-top: 0;
+    background-color: white;
+}
+
+/* Stor bild högst upp */
+.kontakt-hero {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.kontakt-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Rubriken på bilden */
+.kontakt-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px 25px;
+    text-align: center;
+}
+
+/* Allt innehåll på kontaktsidan */
+.kontaktsida {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Toves bild och kontaktinfo */
+.kontakt-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Bild på Tove */
+.kontakt-agare img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.kontakt-agare p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Rubriker och text */
+.kontakt-uppgifter h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+    width: fit-content;
+}
+
+.kontakt-uppgifter h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.kontakt-uppgifter p {
+    font-size: 17px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.kontakt-uppgifter a {
+    color: black;
+    overflow-wrap: anywhere;
+}
+
+/* Hemsidans tillverkare */
+.kontakt-team {
+    margin-top: 45px;
+    border-top: 2px solid black;
+    padding-top: 15px;
+}
+
+.kontakt-team > h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+/* Personerna ligger under varandra på mobil */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+/* Bild och text bredvid varandra */
+.team-person {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.team-person img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.team-person h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.team-person p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* =====================================
+   STÖRRE SKÄRMAR
+   ===================================== */
+
+@media (min-width: 600px) {
+
+    .kontakt-hero {
+        height: 220px;
+    }
+
+    /* Bild till vänster, info till höger */
+    .kontakt-info {
+        grid-template-columns: 280px 1fr;
+        gap: 40px;
+    }
+
+    /* Två personer på varje rad */
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 50px 30px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .kontakt-hero {
+        height: 250px;
+    }
+
+    .kontaktsida {
+        padding: 50px 40px;
+    }
+
+    .kontakt-info {
+        grid-template-columns: 300px 1fr;
+        gap: 70px;
+    }
+
+    .team-grid {
+        gap: 65px 70px;
+    }
+}
