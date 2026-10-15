@@ -256,14 +256,19 @@ body {
 }
 
 .hero-caption h2 {
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     font-size: 21px;
 }
 
 .hero-caption p {
+    margin: 0;
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
+}
+
+.hero-caption p + p {
+    margin-top: 12px;
 }
 
 .home-page .category-row {
@@ -416,6 +421,10 @@ body {
     .hero-caption p {
         font-size: 14px;
         line-height: 1.35;
+    }
+
+    .hero-caption p + p {
+        margin-top: 8px;
     }
 
     .home-page .category-card {
