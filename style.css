@@ -1,4 +1,10 @@
+/* Mobile-first: mobil är standard. Större skärmar anpassas längre ned. */
+:root {
+    --farg-svart: #020202;
+    --farg-vit: white;
+}
 
+/* Grundstil och mobil */
 * {
     margin: 0;
     padding: 0;
@@ -12,39 +18,28 @@ body {
     box-sizing: border-box;
 }
 
-
-
-/* This is where the Header is styled */
-
 .header {
-    background-color: #020202;
+    background-color: var(--farg-svart);
     padding: 10px 0 0;
     text-align: center;
-
-    /* placerar bilderna i tre kolumner */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    padding-top: 8px;
 }
-
-
-/* Interflora till vänster */
 
 .interflora-link {
     grid-column: 1;
     grid-row: 1;
     justify-self: start;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .interflora-link img {
-    width: 150px;
+    width: 70px;
     height: auto;
     margin-right: 10px;
 }
-
-
-/* Iris-loggan i mitten */
 
 .logo {
     grid-column: 2;
@@ -53,154 +48,109 @@ body {
 }
 
 .logo img {
-    width: 140px;
+    width: 90px;
     height: auto;
     margin-right: 10px;
 }
-
-
-/* Sociala medier till höger */
 
 .facebook-link {
     grid-column: 3;
     grid-row: 1;
     justify-self: end;
-    margin-right: 85px;
+    margin-right: 45px;
 }
 
 .instagram-link {
     grid-column: 3;
     grid-row: 1;
     justify-self: end;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 .facebook-link img,
 .instagram-link img {
-    width: 70px;
+    width: 30px;
     height: auto;
     margin-right: 6px;
 }
-
-
-/* navbar */
-
-/* This is where the Navigation is styled */
 
 .nav {
     background-color: #fffafa;
     position: relative;
     z-index: 10;
-
-    /* navbar på egen rad under loggorna */
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
 }
 
-
-/* Huvudmenyn */
-
 .nav-links {
-    display: flex;
+    display: none;
     justify-content: center;
-    align-items: center;
-    gap: 3px;
-
+    align-items: stretch;
+    gap: 0;
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-direction: column;
+    width: 100%;
 }
-
-
-/* Länkarna */
 
 .nav a {
     display: block;
-    padding: 8px 12px;
-
+    padding: 12px 20px;
     border: 1px solid #d6d0d0;
     color: black;
     text-decoration: none;
 }
 
-
-/* Hover på länkar */
-
 .nav a:hover {
     background-color: #f2f2f2;
 }
-
-
-/* dropdown */
-
-/* Blommor-knappens behållare */
 
 .dropdown {
     position: relative;
 }
 
-
-/* Undermenyn */
-
 .nav .dropdown-menu {
-    display: none;
-
-    position: absolute;
+    display: block;
+    position: static;
     top: 100%;
     left: 0;
-
     min-width: 180px;
-
     background-color: white;
     list-style: none;
-
     margin: 0;
     padding: 0;
-
-    border: 1px solid #d6d0d0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    box-shadow: none;
+    padding-left: 20px;
 }
 
-
-/* Visar undermenyn när musen är över Blommor */
-
 .nav .dropdown:hover .dropdown-menu,
+
 .nav .dropdown:focus-within .dropdown-menu {
     display: block;
 }
-
-
-/* Länkar i dropdown */
 
 .dropdown-menu a {
     padding: 12px 15px;
 }
 
-
-/* Hover i dropdown */
-
 .dropdown-menu a:hover {
     background-color: #eeeeee;
 }
-
-
-/* hamburgarmeny */
-
-/* Dold på stora skärmar */
 
 #menu-toggle {
     display: none;
 }
 
 .hamburger {
-    display: none;
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: black;
 }
-
-
-/* main */
-
-/* This is where the Main is styled */
 
 .main {
     padding: clamp(16px, 4vw, 48px);
@@ -208,8 +158,11 @@ body {
 }
 
 .home-Backgroundimg,
+
 .category-row,
+
 .insta-gallery,
+
 .home-info {
     width: min(100%, 1200px);
     margin-inline: auto;
@@ -218,8 +171,9 @@ body {
 .Background-picture {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 16 / 6;
-    min-height: 220px;
+    aspect-ratio: auto;
+    min-height: 0;
+    display: grid;
 }
 
 .Background-picture::after {
@@ -234,41 +188,46 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    grid-area: 1 / 1;
 }
 
 .hero-caption {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    right: 24px;
-    top: 24px;
-    left: 5%;
-    width: min(72%, 760px);
-    max-width: 760px;
+    right: auto;
+    top: auto;
+    left: auto;
+    width: auto;
+    max-width: none;
     color: white;
     text-align: left;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    grid-area: 1 / 1;
+    align-self: start;
+    margin: 16px;
+    bottom: auto;
 }
 
 .hero-caption h1 {
     margin-bottom: 10px;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 1.1;
 }
 
 .hero-caption h2 {
     margin-bottom: 12px;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .hero-caption p {
     margin: 0;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.35;
     text-align: left;
 }
 
 .hero-caption p + p {
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .home-page .category-row {
@@ -282,8 +241,8 @@ body {
 
 .home-page .category-card {
     display: block;
-    width: min(180px, calc((100% - 20px) / 2));
-    background: white;
+    width: min(140px, calc((100% - 15px) / 2));
+    background: var(--farg-vit);
     border: 2px solid black;
     color: black;
     text-align: center;
@@ -294,7 +253,7 @@ body {
 .home-page .category-card img {
     display: block;
     width: 100%;
-    height: 180px;
+    height: 110px;
     object-fit: cover;
 }
 
@@ -309,30 +268,35 @@ body {
 }
 
 .home-page .category-card:hover,
+
 .home-page .category-card:focus-visible {
     z-index: 2;
     transform: scale(1.25);
 }
 
 .insta-gallery,
+
 .open-hours,
+
 .find-us {
     padding: 20px;
     color: black;
-    background: white;
+    background: var(--farg-vit);
     text-align: left;
 }
 
 .insta-gallery h2,
+
 .open-hours h2,
+
 .find-us h2 {
     margin-bottom: 16px;
 }
 
 .insta-photos {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
 }
 
 .insta-photos a {
@@ -349,12 +313,13 @@ body {
 
 .home-info {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 14px;
     margin-top: 20px;
 }
 
 .open-hours table,
+
 .find-us iframe {
     width: 100%;
 }
@@ -364,6 +329,7 @@ body {
 }
 
 .open-hours th,
+
 .open-hours td {
     padding: 12px 4px;
     border-bottom: 1px solid #e5e5e5;
@@ -382,87 +348,23 @@ body {
 
 .find-us iframe {
     display: block;
-    height: 240px;
+    height: 220px;
     border: 0;
 }
 
-@media (max-width: 600px) {
-    .Background-picture {
-        display: grid;
-        aspect-ratio: auto;
-        min-height: 0;
-    }
+.home-page .category-card:hover,
 
-    .Background-picture > img {
-        grid-area: 1 / 1;
-    }
-
-    .hero-caption {
-        position: relative;
-        grid-area: 1 / 1;
-        align-self: start;
-        margin: 16px;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-        width: auto;
-        max-width: none;
-    }
-
-    .hero-caption h1 {
-        font-size: 24px;
-    }
-
-    .hero-caption h2 {
-        font-size: 18px;
-    }
-
-    .hero-caption p {
-        font-size: 14px;
-        line-height: 1.35;
-    }
-
-    .hero-caption p + p {
-        margin-top: 8px;
-    }
-
-    .home-page .category-card {
-        width: min(140px, calc((100% - 15px) / 2));
-    }
-
-    .home-page .category-card img {
-        height: 110px;
-    }
-
-    .home-page .category-card:hover,
     .home-page .category-card:focus-visible {
-        transform: scale(1.1);
-    }
-
-    .insta-gallery,
-    .open-hours,
-    .find-us {
-        padding: 16px;
-    }
-
-    .insta-photos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px;
-    }
-
-    .home-info {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
-    .find-us iframe {
-        height: 220px;
-    }
+    transform: scale(1.1);
 }
-/* footer */
 
-/* This is where the footer is styled */
+.insta-gallery,
+
+    .open-hours,
+
+    .find-us {
+    padding: 16px;
+}
 
 .footer {
     padding: 36px 20px 18px;
@@ -474,11 +376,12 @@ body {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
 .footer-content > section,
+
 .footer-content > nav {
     padding-bottom: 12px;
     border-bottom: 1px solid #555;
@@ -490,7 +393,9 @@ body {
 }
 
 .footer p,
+
 .footer a,
+
 .footer address {
     color: #eee;
     line-height: 1.8;
@@ -517,6 +422,7 @@ body {
 }
 
 .footer th,
+
 .footer td {
     padding: 3px 0;
     text-align: left;
@@ -533,8 +439,6 @@ body {
     text-align: center;
 }
 
-/*This is where the Gallery is styled*/
-
 main {
     padding-top: 28px;
     padding-bottom: 30px;
@@ -544,7 +448,7 @@ main .Galleri-bilder {
     max-width: 1200px;
     margin: 18px auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
     grid-auto-flow: dense;
 }
@@ -560,146 +464,37 @@ main .Galleri-bilder img {
 
 main .Galleri-bilder .gallery-feature {
     grid-column: span 1;
-    height: 360px;
+    height: 260px;
 }
 
-/* mobilanpassning */
-
-/*Galleri*/
-
-@media (max-width: 768px) {
-    main .Galleri-bilder {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    main .Galleri-bilder .gallery-feature {
-        grid-column: span 1;
-        height: 260px;
-    }
-
-/*Footer*/
-
-    .footer-content {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-@media (max-width:699px){
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
+.header-top {
+    padding: 10px;
+    gap: 10px;
 }
 
-    /* header mobil */
+.facebook-link img,
 
-    .header {
-        padding-top: 8px;
-    }
-
-
-    .header-top {
-        padding: 10px;
-        gap: 10px;
-    }
-
-
-    /* Mindre bilder i headern */
-
-    .interflora-link {
-        margin-left: 10px;
-    }
-
-    .interflora-link img {
-        width: 70px;
-    }
-
-    .logo img {
-        width: 90px;
-    }
-
-    .facebook-link {
-        margin-right: 45px;
-    }
-
-    .instagram-link {
-        margin-right: 10px;
-    }
-
-    .facebook-link img,
     .instagram-link img {
-        width: 30px;
-    }
-
-
-
-    .sociala-medier {
-        gap: 5px;
-    }
-
-    .sociala-medier img {
-        width: 25px;
-        height: 25px;
-    }
-
-
-    /* hamburgarmeny mobil */
-
-    /* Visar hamburgarikonen */
-
-    .hamburger {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        padding: 10px 20px;
-        color: black;
-    }
-
-
-    /* Döljer huvudmenyn */
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        width: 100%;
-    }
-
-
-    /* Visar huvudmenyn när hamburgaren klickas */
-
-    #menu-toggle:checked ~ .nav-links {
-        display: flex;
-    }
-
-
-    /* Visar blomkategorierna i mobilmenyn */
-
-    .nav .dropdown-menu {
-        display: block;
-        position: static;
-        box-shadow: none;
-        border: none;
-        padding-left: 20px;
-    }
-
-
-    /* Större klickytor på mobilen */
-
-    .nav a {
-        padding: 12px 20px;
-    }
-
+    width: 30px;
 }
 
+.sociala-medier {
+    gap: 5px;
+}
 
-/* -----------BESTÄLLNINGSIDA ----------- */
+.sociala-medier img {
+    width: 25px;
+    height: 25px;
+}
+
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
 
 .bestall-main {
     min-height: 100vh;
     background-color: white;
-    padding: 30px 20px 60px;
-
+    padding: 20px 10px 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -708,13 +503,11 @@ main .Galleri-bilder .gallery-feature {
 .bestall-form {
     width: 100%;
     max-width: 400px;
-
     border: 2px solid black;
-    padding: 20px;
-
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 12px
+    gap: 12px;
 }
 
 .bestall-form h1 {
@@ -727,6 +520,7 @@ main .Galleri-bilder .gallery-feature {
 }
 
 .bestall-form > input,
+
 .bestall-form textarea {
     width: 100%;
     padding: 10px;
@@ -756,7 +550,7 @@ main .Galleri-bilder .gallery-feature {
 }
 
 .bestall-form button {
-    background-color: #020202;
+    background-color: var(--farg-svart);
     color: white;
     border: none;
     padding: 12px;
@@ -768,126 +562,74 @@ main .Galleri-bilder .gallery-feature {
     background-color: #555;
 }
 
-
-/* ----------- Beställning mobil ----------- */
-
-@media (max-width: 768px) {
-    .bestall-main {
-        padding: 20px 10px 40px;
-    }
-
-    .bestall-form {
-        padding: 10px;
-    }
-}
-
-/* ----------- kategoribilder i blommor ----------- */
-
-/* placerar bilderna bredvid varandra */
-
 .kategorier {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-
-    padding: 50px 20px;
+    gap: 15px;
+    padding: 30px 10px;
 }
 
-/* varje kategoriruta */
 .kategori {
     display: block;
-    width: 180px;
-
+    width: 140px;
     background-color: white;
     border: 2px solid black;
-
     text-align: center;
     text-decoration: none;
     color: black;
-
     transition: transform 0.3s ease;
 }
 
-/* kategori bilderna */
 .kategori img {
     display: block;
     width: 100%;
-    height: 180px;
+    height: 110px;
     object-fit: cover;
 }
 
-/* svart textruta under bilderna */
 .kategori p {
     background-color: black;
     color: white;
-
     padding: 10px;
     font-size: 18px;
     margin: 0;
     border-top: 2px solid black;
 }
 
-/* hover effekt på kategorirutor */
 .kategori:hover {
     transform: scale(1.25);
     z-index: 2;
 }
 
-/* ----------- Kategoribilder mobil ----------- */
-
-@media (max-width: 768px) {
-    .kategorier {
-        gap: 15px;
-        padding: 30px 10px;
-    }
-
-    .kategori {
-        width: 140px;
-    }
-
-    .kategori img {
-        height: 110px;
-    }
-
-    .kategori:hover, .kategori:focus-visable {
-        transform: scale(1.1);
-    }
+.kategori:hover, .kategori:focus-visible {
+    transform: scale(1.1);
 }
-
-/* ----------- Begravningssidan ----------- */
 
 .begravning-main {
     background-color: white;
     min-height: 100vh;
-    padding: 30px 25px 60px;
+    padding: 20px 15px 40px;
 }
 
-/* rubriken */
-.begravning_main h1 {
-    font-size: 42px;
+.begravning-main h1 {
+    font-size: 32px;
     margin-bottom: 5px;
-    margin-left: 30px;
+    margin-left: 0;
 }
 
 .begravning-intro {
     font-size: 14px;
-    margin-left: 30px;
+    margin-left: 0;
     margin-bottom: 30px;
 }
 
-/* kategorier */
-
-/* sju lodräta kolumner */
-
 .begravning-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 25px 10px;
 }
-
-/* varje kategori */
 
 .begravning-kategori {
     min-width: 0;
@@ -899,10 +641,6 @@ main .Galleri-bilder .gallery-feature {
     border-right: none;
 }
 
-/* huvudbilder */
-
-/* fyrkantiga bilder */
-
 .begravning-huvudbild {
     display: block;
     width: 100%;
@@ -912,8 +650,6 @@ main .Galleri-bilder .gallery-feature {
     object-position: center;
     border-radius: 5px;
 }
-
-/* kategorinamn och pris */
 
 .begravning-kategori h2 {
     font-size: 15px;
@@ -926,15 +662,12 @@ main .Galleri-bilder .gallery-feature {
     margin-bottom: 25px;
 }
 
-/* exempelbilder */
-
 .begravning-bilder {
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-
-/* beställ knapp */
 
 .begravning-bestall {
     display: flex;
@@ -955,63 +688,16 @@ main .Galleri-bilder .gallery-feature {
     background-color: #555;
 }
 
-/* mobilanpassning */
-
-/* surfplatta */
-@media (max-width: 1000px) {
-    .begravning-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap:25px 10px
-    }
-}
-
-/* mobil */
-@media (max-width: 600px) {
-    .begravning-main {
-        padding: 20px 15px 40px;
-    }
-
-    .begravning-main h1 {
-        font-size: 32px;
-        margin-left: 0;
-    }
-
-    .begravning-intro {
-        margin-left: 0;
-    }
-
-    .begravning-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* mycket små mobiler */
-@media (max-width: 400px) {
-    .begravning-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .begravning-bilder {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* ---------- Födelsedagssida ----------- */
-
 .fodelsedag-main {
     background-color: white;
     min-height: 100vh;
-    padding: 30px 25px 60px;
+    padding: 20px 15px 40px;
 }
 
-/* titel och beskrivande text */
-
 .fodelsedag-main h1 {
-    font-size: 42px;
+    font-size: 32px;
     margin-bottom: 25px;
-    margin-left: 30px;
+    margin-left: 0;
 }
 
 .fodelsedag-info {
@@ -1019,17 +705,15 @@ main .Galleri-bilder .gallery-feature {
 }
 
 .fodelsedag-info p {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.4;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
-
-/* Bilder */
 
 .fodelsedag-bilder {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 10px;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -1044,12 +728,10 @@ main .Galleri-bilder .gallery-feature {
     border-radius: 5px;
 }
 
-/* beställ kapp */
-
 .fodelsedag-bestall {
     display: flex;
     justify-content: center;
-    margin-top: 50px
+    margin-top: 50px;
 }
 
 .fodelsedag-bestall a {
@@ -1065,74 +747,39 @@ main .Galleri-bilder .gallery-feature {
     background-color: #555;
 }
 
-@media (max-width: 600px) {
-    .fodelsedag-main {
-        padding: 20px 15px 40px;
-    }
-
-    .fodelsedag-main h1 {
-        font-size: 32px;
-        margin-left: 0;
-    }
-
-    .fodelsedag info p {
-        font-size: 15px;
-    }
-
-    .fodelsedag-bilder {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .fodelsedag-bilder {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ------------ Bröllopssida ------------ */
-
 .brollop-main {
     background-color: white;
     min-height: 100vh;
-    padding: 30px 25px 60px;
+    padding: 20px 15px 40px;
 }
 
-/* text */
-
 .brollop-main h1 {
-    font-size: 42px;
+    font-size: 32px;
     margin-bottom: 5px;
-    margin-left: 30px;
+    margin-left: 0;
 }
 
 .brollop-intro {
     font-size: 14px;
-    margin-left: 30px;
+    margin-left: 0;
     margin-bottom: 30px;
 }
 
-/* fyra lodräta kategorier */
-
 .brollop-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 25px 10px;
 }
 
 .brollop-kategori {
     min-width: 0;
     padding: 0 8px;
-    border-right: 1px solid black;
+    border-right: none;
 }
 
 .brollop-kategori:last-child {
     border-right: none;
 }
-
-/* huvudbilder */
 
 .brollop-huvudbild {
     display: block;
@@ -1144,9 +791,7 @@ main .Galleri-bilder .gallery-feature {
     border-radius: 5px;
 }
 
-/* kategorinamn och pris */
-
-.brollop.kategori h2 {
+.brollop-kategori h2 {
     font-size: 17px;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -1157,15 +802,12 @@ main .Galleri-bilder .gallery-feature {
     margin-bottom: 25px;
 }
 
-/* exempelbilder */
-
 .brollop-bilder {
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-
-/* Beställ knapp */
 
 .brollop-bestall {
     display: flex;
@@ -1186,90 +828,39 @@ main .Galleri-bilder .gallery-feature {
     background-color: #555;
 }
 
-/* mobil anpassning för bröllop */
-
-@media (max-width: 1000px) {
-
-    .brollop-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px 10px;
-    }
-
-    .brollop-kategori {
-        border-right: none;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .brollop-main {
-        padding: 20px 15px 40px;
-    }
-
-    .brollop-main h1 {
-        font-size: 32px;
-        margin-left: 0;
-    }
-
-    .brollop-intro {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .brollop-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .brollop-bilder {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* ----------- Annatsida ----------- */
-
 .annat-main {
     background-color: white;
     min-height: 100vh;
-    padding:30px 25px 60px;
+    padding: 20px 15px 40px;
 }
 
-/* rubrik */
-
 .annat-main h1 {
-    font-size: 42px;
+    font-size: 32px;
     margin-bottom: 5px;
-    margin-left: 30px;
+    margin-left: 0;
 }
 
 .annat-intro {
     font-size: 14px;
     margin-bottom: 30px;
-    margin-bottom: 30px;
+    margin-left: 0;
 }
-
-/* fem lodräta kategorier */
 
 .annat-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 25px 10px;
 }
 
 .annat-kategori {
     min-width: 0;
     padding: 0 8px;
-    border-right: 1px solid black;
+    border-right: none;
 }
 
 .annat-kategori:last-child {
     border-right: none;
 }
-
-/* huvudbilder */
 
 .annat-huvudbild {
     display: block;
@@ -1280,8 +871,6 @@ main .Galleri-bilder .gallery-feature {
     object-position: center;
     border-radius: 5px;
 }
-
-/* kategorinamn och pris */
 
 .annat-kategori h2 {
     font-size: 17px;
@@ -1294,24 +883,23 @@ main .Galleri-bilder .gallery-feature {
     margin-bottom: 25px;
 }
 
-/* exempelbilder */
-
 .annat-bilder {
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .begravning-bilder img,
+
 .brollop-bilder img,
+
 .annat-bilder img {
     display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
 }
-
-/* Beställknapp */
 
 .annat-bestall {
     display: flex;
@@ -1332,48 +920,335 @@ main .Galleri-bilder .gallery-feature {
     background-color: #555;
 }
 
-/* mobilanpassning för annat sidan */
-
-@media (max-width: 1000px) {
-
-    .annat-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 25px 10px;
+/* Anpassning från 401px */
+@media (min-width: 401px) {
+    .begravning-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .annat-kategori {
-        border-right: none;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .annat-main {
-        padding: 20px 15px 40px;
+    .begravning-bilder {
+        display: flex;
+        grid-template-columns: revert;
     }
 
-    .annat-main h1 {
-        font-size: 32px;
-        margin-left: 0;
+    .fodelsedag-bilder {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .annat-intro {
-        margin-left: 0;
+    .brollop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .brollop-bilder {
+        display: flex;
+        grid-template-columns: revert;
     }
 
     .annat-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 400px) {
-
-    .annat-grid {
-        grid-template-columns: 1fr;
     }
 
     .annat-bilder {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: flex;
+        grid-template-columns: revert;
     }
+
 }
+
+/* Anpassning från 601px */
+@media (min-width: 601px) {
+    .Background-picture {
+        aspect-ratio: 16 / 6;
+        min-height: 220px;
+        display: revert;
+    }
+
+    .hero-caption {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        left: 5%;
+        width: min(72%, 760px);
+        max-width: 760px;
+        grid-area: revert;
+        align-self: revert;
+        margin: revert;
+        bottom: revert;
+    }
+
+    .hero-caption h1 {
+        font-size: 36px;
+    }
+
+    .hero-caption h2 {
+        font-size: 21px;
+    }
+
+    .hero-caption p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .hero-caption p + p {
+        margin-top: 12px;
+    }
+
+    .home-page .category-card {
+        width: min(180px, calc((100% - 20px) / 2));
+    }
+
+    .home-page .category-card img {
+        height: 180px;
+    }
+
+    .insta-photos {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .home-info {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 20px;
+    }
+
+    .find-us iframe {
+        height: 240px;
+    }
+
+    .begravning-main {
+        padding: 30px 25px 60px;
+    }
+
+    .begravning-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .begravning-intro {
+        margin-left: 30px;
+    }
+
+    .begravning-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .fodelsedag-main {
+        padding: 30px 25px 60px;
+    }
+
+    .fodelsedag-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .fodelsedag-info p {
+        font-size: 17px;
+    }
+
+    .fodelsedag-bilder {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .brollop-main {
+        padding: 30px 25px 60px;
+    }
+
+    .brollop-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .brollop-intro {
+        margin-left: 30px;
+    }
+
+    .annat-main {
+        padding: 30px 25px 60px;
+    }
+
+    .annat-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .annat-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .Background-picture > img {
+        grid-area: revert;
+    }
+
+    .home-page .category-card:hover,
+    
+        .home-page .category-card:focus-visible {
+        transform: revert;
+    }
+
+    .insta-gallery,
+    
+        .open-hours,
+    
+        .find-us {
+        padding: revert;
+    }
+
+    .annat-intro {
+        margin-left: revert;
+    }
+
+}
+
+/* Anpassning från 700px */
+@media (min-width: 700px) {
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+}
+
+/* Anpassning från 769px */
+@media (min-width: 769px) {
+    .interflora-link {
+        margin-left: 30px;
+    }
+
+    .interflora-link img {
+        width: 150px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .facebook-link {
+        margin-right: 85px;
+    }
+
+    .instagram-link {
+        margin-right: 30px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        flex-direction: revert;
+        width: revert;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+    }
+
+    .nav .dropdown-menu {
+        display: none;
+        position: absolute;
+        border: 1px solid #d6d0d0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding-left: revert;
+    }
+
+    .hamburger {
+        display: none;
+        font-size: revert;
+        cursor: revert;
+        padding: revert;
+        color: revert;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    main .Galleri-bilder {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    main .Galleri-bilder .gallery-feature {
+        height: 360px;
+    }
+
+    .bestall-main {
+        padding: 30px 20px 60px;
+    }
+
+    .bestall-form {
+        padding: 20px;
+    }
+
+    .kategorier {
+        gap: 20px;
+        padding: 50px 20px;
+    }
+
+    .kategori {
+        width: 180px;
+    }
+
+    .kategori img {
+        height: 180px;
+    }
+
+    .header {
+        padding-top: revert;
+    }
+
+    .header-top {
+        padding: revert;
+        gap: revert;
+    }
+
+    .facebook-link img,
+    .instagram-link img {
+        width: 70px;
+    }
+
+    .sociala-medier {
+        gap: revert;
+    }
+
+    .sociala-medier img {
+        width: revert;
+        height: revert;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: revert;
+    }
+
+    .kategori:hover, .kategori:focus-visible {
+        transform: revert;
+    }
+
+}
+
+/* Anpassning från 1001px */
+@media (min-width: 1001px) {
+    .begravning-grid {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+    }
+
+    .brollop-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .brollop-kategori {
+        border-right: 1px solid black;
+    }
+
+    .annat-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .annat-kategori {
+        border-right: 1px solid black;
+    }
+
+}
+
