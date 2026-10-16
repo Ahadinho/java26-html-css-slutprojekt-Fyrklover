@@ -56,7 +56,7 @@ Jobbat på Kontakt.html, README.md filen, Infogning av bilder på skiss, och lit
 Yoonis:
 Foundation
 Header
-Main (index.html, Galleri.html
+Main (index.html, Galleri.html)
 Footer
 css och mobilvy för alla dessa
 
