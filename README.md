@@ -54,7 +54,7 @@ Gällande Darkmode....
 Ansvarsområden och jobb
 
 Ahad:
-Jobbat på Kontakt.html, README.md filen, Infogning av bilder på skiss, och lite hmtl för footer
+Jobbat på Kontakt.html, README.md filen, Infogning av bilder på skiss, och lite hmtl för footer. Fixat Bootstrap responsive navbar för alla .html sidor, och lite CSS för Navbar
 
 Yoonis:
 Foundation
