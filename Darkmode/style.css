@@ -1,0 +1,1376 @@
+/* Mobile-first: mobil är standard. Större skärmar anpassas längre ned. */
+:root {
+    --farg-svart: #020202;
+    --farg-vit: white;
+}
+
+/* Grundstil och mobil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: var(--farg-svart);
+    padding: 10px 0 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.interflora-link {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin-left: 10px;
+}
+
+.interflora-link img {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.facebook-link {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    margin-right: 45px;
+}
+
+.instagram-link {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    margin-right: 10px;
+}
+
+.facebook-link img,
+.instagram-link img {
+    width: 30px;
+    height: auto;
+    margin-right: 6px;
+}
+
+.nav {
+    background-color: #fffafa;
+    position: relative;
+    z-index: 10;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+}
+
+.nav-links {
+    display: none;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav a {
+    display: block;
+    padding: 12px 20px;
+    border: 1px solid #d6d0d0;
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.nav .dropdown-menu {
+    display: block;
+    position: static;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    padding-left: 20px;
+}
+
+.nav .dropdown:hover .dropdown-menu,
+
+.nav .dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding: 12px 15px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #eeeeee;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: black;
+}
+
+.main {
+    padding: clamp(16px, 4vw, 48px);
+    background: #f4f6f2;
+}
+
+.home-Backgroundimg,
+
+.category-row,
+
+.insta-gallery,
+
+.home-info {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+}
+
+.Background-picture {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: auto;
+    min-height: 0;
+    display: grid;
+}
+
+.Background-picture::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.62), transparent);
+}
+
+.Background-picture > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1;
+}
+
+.hero-caption {
+    position: relative;
+    z-index: 1;
+    right: auto;
+    top: auto;
+    left: auto;
+    width: auto;
+    max-width: none;
+    color: white;
+    text-align: left;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    grid-area: 1 / 1;
+    align-self: start;
+    margin: 16px;
+    bottom: auto;
+}
+
+.hero-caption h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.hero-caption h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.hero-caption p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.hero-caption p + p {
+    margin-top: 8px;
+}
+
+.home-page .category-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.home-page .category-card {
+    display: block;
+    width: min(140px, calc((100% - 15px) / 2));
+    background: var(--farg-vit);
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.home-page .category-card img {
+    display: block;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.home-page .category-card span {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border-top: 2px solid black;
+    color: white;
+    background: black;
+    font-size: 18px;
+}
+
+.home-page .category-card:hover,
+
+.home-page .category-card:focus-visible {
+    z-index: 2;
+    transform: scale(1.25);
+}
+
+.insta-gallery,
+
+.open-hours,
+
+.find-us {
+    padding: 20px;
+    color: black;
+    background: var(--farg-vit);
+    text-align: left;
+}
+
+.insta-gallery h2,
+
+.open-hours h2,
+
+.find-us h2 {
+    margin-bottom: 16px;
+}
+
+.insta-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.insta-photos a {
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.insta-photos img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.open-hours table,
+
+.find-us iframe {
+    width: 100%;
+}
+
+.open-hours table {
+    border-collapse: collapse;
+}
+
+.open-hours th,
+
+.open-hours td {
+    padding: 12px 4px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+.open-hours td {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.find-us address {
+    margin-bottom: 12px;
+    font-style: normal;
+}
+
+.find-us iframe {
+    display: block;
+    height: 220px;
+    border: 0;
+}
+
+.home-page .category-card:hover,
+
+    .home-page .category-card:focus-visible {
+    transform: scale(1.1);
+}
+
+.insta-gallery,
+
+    .open-hours,
+
+    .find-us {
+    padding: 16px;
+}
+
+.footer {
+    padding: 36px 20px 18px;
+    color: #f5f5f5;
+    background: #222;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.footer-content > section,
+
+.footer-content > nav {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #555;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    color: #fce5d8;
+}
+
+.footer p,
+
+.footer a,
+
+.footer address {
+    color: #eee;
+    line-height: 1.8;
+}
+
+.footer address {
+    font-style: normal;
+}
+
+.footer a {
+    display: block;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #eee;
+    font-size: 0.9rem;
+}
+
+.footer th,
+
+.footer td {
+    padding: 3px 0;
+    text-align: left;
+}
+
+.footer td {
+    white-space: nowrap;
+}
+
+.footer-content > p {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+    padding-top: 14px;
+    text-align: center;
+}
+
+main {
+    padding-top: 28px;
+    padding-bottom: 30px;
+}
+
+main .Galleri-bilder {
+    max-width: 1200px;
+    margin: 18px auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    grid-auto-flow: dense;
+}
+
+main .Galleri-bilder img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+main .Galleri-bilder .gallery-feature {
+    grid-column: span 1;
+    height: 260px;
+}
+
+.header-top {
+    padding: 10px;
+    gap: 10px;
+}
+
+.facebook-link img,
+
+    .instagram-link img {
+    width: 30px;
+}
+
+.sociala-medier {
+    gap: 5px;
+}
+
+.sociala-medier img {
+    width: 25px;
+    height: 25px;
+}
+
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+.bestall-main {
+    min-height: 100vh;
+    background-color: white;
+    padding: 20px 10px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bestall-form {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bestall-form h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.bestall-form label {
+    font-size: 16px;
+}
+
+.bestall-form > input,
+
+.bestall-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.form-grupp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 12px 0;
+}
+
+.form-grupp label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notering {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bestall-form button {
+    background-color: var(--farg-svart);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bestall-form button:hover {
+    background-color: #555;
+}
+
+.kategorier {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 30px 10px;
+}
+
+.kategori {
+    display: block;
+    width: 140px;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.kategori img {
+    display: block;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.kategori p {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    margin: 0;
+    border-top: 2px solid black;
+}
+
+.kategori:hover {
+    transform: scale(1.25);
+    z-index: 2;
+}
+
+.kategori:hover, .kategori:focus-visible {
+    transform: scale(1.1);
+}
+
+.begravning-main {
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px 15px 40px;
+}
+
+.begravning-main h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.begravning-intro {
+    font-size: 14px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+
+.begravning-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px 10px;
+}
+
+.begravning-kategori {
+    min-width: 0;
+    padding: 0 8px;
+    border-right: 1px solid black;
+}
+
+.begravning-kategori:last-child {
+    border-right: none;
+}
+
+.begravning-huvudbild {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.begravning-kategori h2 {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.begravning-kategori p {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.begravning-bilder {
+    display: grid;
+    flex-direction: column;
+    gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.begravning-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.begravning-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.begravning-bestall a:hover {
+    background-color: #555;
+}
+
+.fodelsedag-main {
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px 15px 40px;
+}
+
+.fodelsedag-main h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    margin-left: 0;
+}
+
+.fodelsedag-info {
+    max-width: 850px;
+}
+
+.fodelsedag-info p {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.fodelsedag-bilder {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fodelsedag-bilder img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.fodelsedag-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.fodelsedag-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.fodelsedag-bestall a:hover {
+    background-color: #555;
+}
+
+.brollop-main {
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px 15px 40px;
+}
+
+.brollop-main h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.brollop-intro {
+    font-size: 14px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+
+.brollop-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px 10px;
+}
+
+.brollop-kategori {
+    min-width: 0;
+    padding: 0 8px;
+    border-right: none;
+}
+
+.brollop-kategori:last-child {
+    border-right: none;
+}
+
+.brollop-huvudbild {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.brollop-kategori h2 {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.brollop-kategori p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.brollop-bilder {
+    display: grid;
+    flex-direction: column;
+    gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.brollop-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.brollop-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.brollop-bestall a:hover {
+    background-color: #555;
+}
+
+.annat-main {
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px 15px 40px;
+}
+
+.annat-main h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.annat-intro {
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.annat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px 10px;
+}
+
+.annat-kategori {
+    min-width: 0;
+    padding: 0 8px;
+    border-right: none;
+}
+
+.annat-kategori:last-child {
+    border-right: none;
+}
+
+.annat-huvudbild {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.annat-kategori h2 {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.annat-kategori p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.annat-bilder {
+    display: grid;
+    flex-direction: column;
+    gap: 15px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.begravning-bilder img,
+
+.brollop-bilder img,
+
+.annat-bilder img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.annat-bestall {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.annat-bestall a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.annat-bestall a:hover {
+    background-color: #555;
+}
+
+/* Anpassning från 401px */
+@media (min-width: 401px) {
+    .begravning-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .begravning-bilder {
+        display: flex;
+        grid-template-columns: revert;
+    }
+
+    .fodelsedag-bilder {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .brollop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .brollop-bilder {
+        display: flex;
+        grid-template-columns: revert;
+    }
+
+    .annat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .annat-bilder {
+        display: flex;
+        grid-template-columns: revert;
+    }
+
+}
+
+/* Anpassning från 601px */
+@media (min-width: 601px) {
+    .Background-picture {
+        aspect-ratio: 16 / 6;
+        min-height: 220px;
+        display: revert;
+    }
+
+    .hero-caption {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        left: 5%;
+        width: min(72%, 760px);
+        max-width: 760px;
+        grid-area: revert;
+        align-self: revert;
+        margin: revert;
+        bottom: revert;
+    }
+
+    .hero-caption h1 {
+        font-size: 36px;
+    }
+
+    .hero-caption h2 {
+        font-size: 21px;
+    }
+
+    .hero-caption p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .hero-caption p + p {
+        margin-top: 12px;
+    }
+
+    .home-page .category-card {
+        width: min(180px, calc((100% - 20px) / 2));
+    }
+
+    .home-page .category-card img {
+        height: 180px;
+    }
+
+    .insta-photos {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .home-info {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 20px;
+    }
+
+    .find-us iframe {
+        height: 240px;
+    }
+
+    .begravning-main {
+        padding: 30px 25px 60px;
+    }
+
+    .begravning-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .begravning-intro {
+        margin-left: 30px;
+    }
+
+    .begravning-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .fodelsedag-main {
+        padding: 30px 25px 60px;
+    }
+
+    .fodelsedag-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .fodelsedag-info p {
+        font-size: 17px;
+    }
+
+    .fodelsedag-bilder {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .brollop-main {
+        padding: 30px 25px 60px;
+    }
+
+    .brollop-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .brollop-intro {
+        margin-left: 30px;
+    }
+
+    .annat-main {
+        padding: 30px 25px 60px;
+    }
+
+    .annat-main h1 {
+        font-size: 42px;
+        margin-left: 30px;
+    }
+
+    .annat-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .Background-picture > img {
+        grid-area: revert;
+    }
+
+    .home-page .category-card:hover,
+    
+        .home-page .category-card:focus-visible {
+        transform: revert;
+    }
+
+    .insta-gallery,
+    
+        .open-hours,
+    
+        .find-us {
+        padding: revert;
+    }
+
+    .annat-intro {
+        margin-left: revert;
+    }
+
+}
+
+/* Anpassning från 700px */
+@media (min-width: 700px) {
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+}
+
+/* Anpassning från 769px */
+@media (min-width: 769px) {
+    .interflora-link {
+        margin-left: 30px;
+    }
+
+    .interflora-link img {
+        width: 150px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .facebook-link {
+        margin-right: 85px;
+    }
+
+    .instagram-link {
+        margin-right: 30px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        flex-direction: revert;
+        width: revert;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+    }
+
+    .nav .dropdown-menu {
+        display: none;
+        position: absolute;
+        border: 1px solid #d6d0d0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding-left: revert;
+    }
+
+    .hamburger {
+        display: none;
+        font-size: revert;
+        cursor: revert;
+        padding: revert;
+        color: revert;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    main .Galleri-bilder {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    main .Galleri-bilder .gallery-feature {
+        height: 360px;
+    }
+
+    .bestall-main {
+        padding: 30px 20px 60px;
+    }
+
+    .bestall-form {
+        padding: 20px;
+    }
+
+    .kategorier {
+        gap: 20px;
+        padding: 50px 20px;
+    }
+
+    .kategori {
+        width: 180px;
+    }
+
+    .kategori img {
+        height: 180px;
+    }
+
+    .header {
+        padding-top: revert;
+    }
+
+    .header-top {
+        padding: revert;
+        gap: revert;
+    }
+
+    .facebook-link img,
+    .instagram-link img {
+        width: 70px;
+    }
+
+    .sociala-medier {
+        gap: revert;
+    }
+
+    .sociala-medier img {
+        width: revert;
+        height: revert;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: revert;
+    }
+
+    .kategori:hover, .kategori:focus-visible {
+        transform: revert;
+    }
+
+}
+
+/* Anpassning från 1001px */
+@media (min-width: 1001px) {
+    .begravning-grid {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+    }
+
+    .brollop-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .brollop-kategori {
+        border-right: 1px solid black;
+    }
+
+    .annat-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .annat-kategori {
+        border-right: 1px solid black;
+    }
+
+}
+
+
+/* Stor bild på Blommor-sidan */
+.blommor-hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.blommor-hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blommor-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 25px;
+    text-align: center;
+}
+
+/* Bakgrundsbild bakom beställningsformuläret */
+.bestall-main {
+    background-image: url("images/1. startsida/startsida.bakgrund.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bestall-form {
+    background-color: white;
+}
+
+/* Tangentbordsstöd för hamburgarmenyn */
+#menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+#menu-toggle:focus-visible + .hamburger {
+    outline: 3px solid #b88656;
+    outline-offset: 4px;
+}
+
+/* Större bild på större skärmar */
+@media (min-width: 768px) {
+    .blommor-hero {
+        height: 450px;
+    }
+}
+
+
+/* Helbild på undersidorna - mobil först */
+.sidbild {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.sidbild img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gör så helbilden når sidans kanter */
+.begravning-main .sidbild,
+.brollop-main .sidbild,
+.fodelsedag-main .sidbild,
+.annat-main .sidbild {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+}
+
+/* Beställ-sidan har redan flex-layout */
+.bestall-main {
+    flex-direction: column;
+    align-items: center;
+}
+
+.bestall-main .sidbild {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    flex-shrink: 0;
+}
+
+/* Surfplatta */
+@media (min-width: 768px) {
+    .sidbild {
+        height: 350px;
+    }
+
+    .begravning-main .sidbild,
+    .brollop-main .sidbild,
+    .fodelsedag-main .sidbild,
+    .annat-main .sidbild {
+        width: calc(100% + 50px);
+        margin-left: -25px;
+    }
+
+    .bestall-main .sidbild {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+}
+
+/* Dator */
+@media (min-width: 1000px) {
+    .sidbild {
+        height: 450px;
+    }
+}
