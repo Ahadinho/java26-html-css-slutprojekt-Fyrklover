@@ -1607,3 +1607,36 @@ html {
 main.main {
     padding-top: 0;
 }
+
+/* =========================================
+   TILLBAKA TILL TOPPEN-KNAPP
+   ========================================= */
+
+/* Placerar knappen till höger längst ner i main */
+.till-toppen {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+/* Knappens utseende */
+.till-toppen-knapp {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Ändrar färg när muspekaren är över knappen */
+.till-toppen-knapp:hover {
+    background-color: #555;
+}
+
+/* Tydlig markering för tangentbordsanvändare */
+.till-toppen-knapp:focus-visible {
+    outline: 3px solid #b88656;
+    outline-offset: 3px;
+}
