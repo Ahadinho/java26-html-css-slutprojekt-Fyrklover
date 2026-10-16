@@ -83,7 +83,11 @@ Ahad:
 Jobbat på Kontakt.html, ReadME fil, Infogning av bilder på skiss
 
 Yoonis:
-
+Foundation
+Header
+Main (index.html, Galleri.html
+Footer
+css och mobilvy för alla dessa
 
 Johanna: 
 Skapat skisser
@@ -91,6 +95,7 @@ Skapat loggan/favicon
 Letade upp alla bilder
 Letade upp länkar för samarbetspartners, facebook och instagram
 Gjorde html och css för Beställ.html, annat.html, begravning.html, beställ.html, blommor.html, bröllop.html, födelsedag.html
+Header och nav
 gjorde css för kontakt.html
 
 Arslan:
