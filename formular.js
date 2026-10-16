@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded", () => { const form = document.getElementById("bestall-form"); if(form) form.addEventListener("submit", event => { event.preventDefault(); alert("Beställningen har inte skickats. Kontakta butiken via telefon eller e-post."); }); });

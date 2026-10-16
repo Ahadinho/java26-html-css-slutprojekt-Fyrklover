@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="sv">
-
-
 <head>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <meta charset="UTF-8">
-
-    <!-- Gör sidan anpassad för mobila enheter -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alla kategorier</title>
-
-    <!-- kopplar html till css -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Blommor och buketter | Iris Blommor i Arlöv</title>
+<meta name="description" content="Upptäck våra blommor för födelsedag, bröllop, begravning och andra tillfällen hos Iris Blommor i Arlöv.">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="style.css">
+    <script src="tema.js" defer></script>
 </head>
-
-
-<body>
-
-    <!-- ======== Header ======== -->
-
-    <header class ="header">
+<body id="toppen">
+<header class ="header">
+        <div class="align-hover"> </div>
 
         <!-- samarbetspartners logga och länk -->
 
         
-        <a href="https://www.interflora.se/" target="_blank" class="interflora-link">
+        <a href="https://www.interflora.se/" target="_blank" rel="noopener noreferrer" class="interflora-link">
             <img src="images/1. startsida/interflora.logga.avif" alt="Interflora">
         </a>
 
@@ -38,15 +30,15 @@
         </div>
 
         <!-- sociala medier öppnas i ny flik -->
-        <a href="https://www.facebook.com/p/Arl%C3%B6vs-Blomsterhandel-61556911313052/" target="_blank" class="facebook-link">
+        <a href="https://www.facebook.com/p/Arl%C3%B6vs-Blomsterhandel-61556911313052/" target="_blank" rel="noopener noreferrer" class="facebook-link">
             <img src="images/1. startsida/facebook.icon.png" alt="Facebook">
         </a>
-        <a href="https://www.instagram.com/arlovsblomsterhandel/" target="_blank" class="instagram-link">
+        <a href="https://www.instagram.com/arlovsblomsterhandel/" target="_blank" rel="noopener noreferrer" class="instagram-link">
             <img src="images/1. startsida/instagram.icon.png" alt="Instagram">
         </a>
 
 
-        <!-- ==================== NAVIGATION ==================== -->
+        <!-- navbar -->
 
 
 <!-- ==================== NAVIGATION ==================== -->
@@ -69,16 +61,16 @@
 
                     <ul class="mobil-dropdown-links">
                         <li><a href="blommor.html">Alla blommor</a></li>
-                        <li><a href="Begravning.html">Begravning</a></li>
-                        <li><a href="födelsedag.html">Födelsedag</a></li>
-                        <li><a href="Bröllop.html">Bröllop</a></li>
+                        <li><a href="begravning.html">Begravning</a></li>
+                        <li><a href="fodelsedag.html">Födelsedag</a></li>
+                        <li><a href="brollop.html">Bröllop</a></li>
                         <li><a href="annat.html">Annat</a></li>
                     </ul>
                 </details>
             </li>
 
             <li><a href="index.html">Hem</a></li>
-            <li><a href="Galleri.html">Galleri</a></li>
+            <li><a href="galleri.html">Galleri</a></li>
             <li>
                 <a href="https://www.interflora.se/"
                    target="_blank"
@@ -86,8 +78,8 @@
                     Interflora
                 </a>
             </li>
-            <li><a href="Kontakt.html">Kontakt</a></li>
-            <li><a href="Beställ.html">Beställ</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bestall.html">Beställ</a></li>
 
         </ul>
     </details>
@@ -99,15 +91,15 @@
             <a href="blommor.html">Blommor</a>
 
             <ul class="dropdown-menu">
-                <li><a href="Begravning.html">Begravning</a></li>
-                <li><a href="födelsedag.html">Födelsedag</a></li>
-                <li><a href="Bröllop.html">Bröllop</a></li>
+                <li><a href="begravning.html">Begravning</a></li>
+                <li><a href="fodelsedag.html">Födelsedag</a></li>
+                <li><a href="brollop.html">Bröllop</a></li>
                 <li><a href="annat.html">Annat</a></li>
             </ul>
         </li>
 
         <li><a href="index.html">Hem</a></li>
-        <li><a href="Galleri.html">Galleri</a></li>
+        <li><a href="galleri.html">Galleri</a></li>
         <li>
             <a href="https://www.interflora.se/"
                target="_blank"
@@ -115,53 +107,20 @@
                 Interflora
             </a>
         </li>
-        <li><a href="Kontakt.html">Kontakt</a></li>
-        <li><a href="Beställ.html">Beställ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="bestall.html">Beställ</a></li>
 
     </ul>
 
 </nav>
 
     </header>
-    <main>
-
-        <!-- Stor bild högst upp på sidan -->
-        <section class="blommor-hero">
-            <img src="images/1. startsida/startsida.bakgrund.webp"
-                alt="Blommor i butiken">
-
-            <h1>Blommor | Iris Blommor</h1>
-        </section>
-
-        <!-- kategoribilder -->
-         <div class="kategorier">
-
-            <a href="begravning.html" class="kategori">
-                <img src="images/1. startsida/startsida.begravning.jpg" alt="Begravningsblommor">
-                <p>Begravning</p>
-            </a>
-            <a href="födelsedag.html" class="kategori">
-                <img src="images/1. startsida/startsida.födelsedag.jpg" alt="Födelsedagsblommor">
-                <p>Födelsedag</p>
-            </a>
-            <a href="bröllop.html" class="kategori">
-                <img src="images/1. startsida/startsida.bröllop.jpg" alt="Bröllopsblommor">
-                <p>Bröllop</p>
-            </a>
-            <a href="annat.html" class="kategori">
-                <img src="images/1. startsida/startsida.annat.jpg" alt="Annat">
-                <p>Annat</p>
-            </a>
-         </div>
-
-
-
-    </main>
-    <footer class="footer">
+<main><section class="blommor-hero"><img src="images/1. startsida/startsida.bakgrund.webp" alt="Blommor i butiken" loading="lazy"><h1>Blommor | Iris Blommor</h1></section><div class="kategorier"><a href="begravning.html" class="kategori"><img src="images/1. startsida/startsida.begravning.jpg" alt="Begravningsblommor" loading="lazy"><p>Begravning</p></a><a href="fodelsedag.html" class="kategori"><img src="images/1. startsida/startsida.födelsedag.jpg" alt="Födelsedagsblommor" loading="lazy"><p>Födelsedag</p></a><a href="brollop.html" class="kategori"><img src="images/1. startsida/startsida.bröllop.jpg" alt="Bröllopsblommor" loading="lazy"><p>Bröllop</p></a><a href="annat.html" class="kategori"><img src="images/1. startsida/startsida.annat.jpg" alt="Annatsblommor" loading="lazy"><p>Annat</p></a></div></main>
+<footer class="footer">
         <div class="footer-content">
             <section>
                 <h3>Kontakt</h3>
-                <a href="+46123456789">012-345 67 89</a>
+                <a href="tel:040430085">040-43 00 85</a>
                 <a href="mailto:irisblommor@gmail.com">Irisblommor@gmail.com</a>
                 <a href="https://www.google.com/maps/search/?api=1&amp;query=Dalbyv%C3%A4gen+9%2C+232+34+Arl%C3%B6v">Dalbyvägen 9, 232 34 Arlöv</a>  
             </section> 
@@ -170,9 +129,9 @@
                 <h3>Länkar</h3>
                 <a href="index.html">Startsida</a>
                 <a href="blommor.html">Blommor</a> 
-                <a href="Galleri.html">Galleri</a>
-                <a href="Kontakt.html">Kontakt</a>
-                <a href="Beställ.html">Beställ</a>
+                <a href="galleri.html">Galleri</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="bestall.html">Beställ</a>
             </nav>
 
             <section>

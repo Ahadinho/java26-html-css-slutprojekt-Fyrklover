@@ -70,5 +70,7 @@ Header och nav
 gjorde css för kontakt.html
 gjort hoppa-till knappar
 jobbat med animationer.
+har gjort automatisk darkmode.
+gjort SEO
 
 Arslan:
