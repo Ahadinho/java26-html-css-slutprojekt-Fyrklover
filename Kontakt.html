@@ -13,6 +13,10 @@
 </head>
 <body id="toppen">
 <header class ="header">
+    
+    <!-- ==================== Bootstraplänk ==================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
         <div class="align-hover"> </div>
 
         <!-- samarbetspartners logga och länk -->
@@ -43,79 +47,65 @@
 
 <!-- ==================== NAVIGATION ==================== -->
 
-<nav class="nav" aria-label="Huvudnavigation">
+<nav class="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="auto" aria-label="Huvudnavigation">
+  <div class="container-fluid">
 
-    <!-- Hamburgarmeny för mobil -->
-    <details class="mobilmeny">
-        <summary class="hamburger">
-            <span aria-hidden="true">☰</span>
-            <span class="meny-text">Meny</span>
-        </summary>
+    <!-- Hamburgarknapp för mobil -->
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#huvudmeny" 
+            aria-controls="huvudmeny" 
+            aria-expanded="false" 
+            aria-label="Öppna eller stäng meny">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Länkar som visas när mobilmenyn öppnas -->
-        <ul class="mobil-nav-links">
-
-            <li>
-                <details class="mobil-dropdown">
-                    <summary>Blommor</summary>
-
-                    <ul class="mobil-dropdown-links">
-                        <li><a href="blommor.html">Alla blommor</a></li>
-                        <li><a href="begravning.html">Begravning</a></li>
-                        <li><a href="fodelsedag.html">Födelsedag</a></li>
-                        <li><a href="brollop.html">Bröllop</a></li>
-                        <li><a href="annat.html">Annat</a></li>
-                    </ul>
-                </details>
-            </li>
-
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="galleri.html">Galleri</a></li>
-            <li>
-                <a href="https://www.interflora.se/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Interflora
-                </a>
-            </li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="bestall.html">Beställ</a></li>
-
-        </ul>
-    </details>
-
-    <!-- Vanlig navigation för dator -->
-    <ul class="dator-nav-links">
-
-        <li class="dropdown">
-            <a href="blommor.html">Blommor</a>
-
-            <ul class="dropdown-menu">
-                <li><a href="begravning.html">Begravning</a></li>
-                <li><a href="fodelsedag.html">Födelsedag</a></li>
-                <li><a href="brollop.html">Bröllop</a></li>
-                <li><a href="annat.html">Annat</a></li>
-            </ul>
+    <!-- Menyinnehåll -->
+    <div class="collapse navbar-collapse" id="huvudmeny">
+      <ul class="navbar-nav ms-auto">
+        
+        <!-- Dropdown: Blommor -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="blommor.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Blommor
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="blommor.html">Alla blommor</a></li>
+            <li><a class="dropdown-item" href="begravning.html">Begravning</a></li>
+            <li><a class="dropdown-item" href="fodelsedag.html">Födelsedag</a></li>
+            <li><a class="dropdown-item" href="brollop.html">Bröllop</a></li>
+            <li><a class="dropdown-item" href="annat.html">Annat</a></li>
+          </ul>
         </li>
 
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="galleri.html">Galleri</a></li>
-        <li>
-            <a href="https://www.interflora.se/"
-               target="_blank"
-               rel="noopener noreferrer">
-                Interflora
-            </a>
+        <!-- Övriga Länkar -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Hem</a>
         </li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="bestall.html">Beställ</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="galleri.html">Galleri</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.interflora.se/" target="_blank" rel="noopener noreferrer">Interflora</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kontakt.html">Kontakt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bestall.html">Beställ</a>
+        </li>
 
-    </ul>
+      </ul>
+    </div>
 
+  </div>
 </nav>
 
     </header>
 <main class="kontakt-main"><section class="kontakt-hero"><img src="images/1. startsida/startsida.bakgrund.webp" alt="Blommor i butiken" loading="lazy"><h1>Kontakt</h1></section><div class="kontaktsida"><section class="kontakt-info"><div class="kontakt-agare"><picture><source media="(min-width: 768px)" srcset="images/3. kontakt/ägare.tove.jpg"><img src="images/3. kontakt/ägare.tove.jpg" alt="Tove, ägare av Arlövs Blomsterhandel" loading="lazy"></picture></div><div class="kontakt-uppgifter"><h2>Info</h2><h3>Kontaktinfo</h3><p><strong>Tove</strong></p><p>Telefon: <a href="tel:040430085">040-43 00 85</a></p><p>Adress: <a href="https://www.google.com/maps/search/?api=1&amp;query=Dalbyv%C3%A4gen+9%2C+232+34+Arl%C3%B6v" target="_blank" rel="noopener noreferrer">Dalbyvägen 9, 232 34 Arlöv</a></p><p>E-post: <a href="mailto:irisblommor@gmail.com">irisblommor@gmail.com</a></p></div></section><section class="kontakt-team"><h2>Hemsidans tillverkare</h2><div class="team-grid"><article class="team-person"><img src="images/3. kontakt/person.png.png" alt="Profilbild för Ahad" loading="lazy"><div><h3>Ahad</h3><p>Teamleader / Programmer</p></div></article><article class="team-person"><img src="images/3. kontakt/person.png.png" alt="Profilbild för Johanna" loading="lazy"><div><h3>Johanna</h3><p>Creative Director / Programmer</p></div></article><article class="team-person"><img src="images/3. kontakt/person.png.png" alt="Profilbild för Yoonis" loading="lazy"><div><h3>Yoonis</h3><p>Programmer</p></div></article><article class="team-person"><img src="images/3. kontakt/person.png.png" alt="Profilbild för Arslan" loading="lazy"><div><h3>Arslan</h3><p>Programmer</p></div></article></div></section></div></main>
+
+
 <footer class="footer">
         <div class="footer-content">
             <section>
@@ -156,5 +146,8 @@
             <p>&copy; 2026 Iris AB. Alla rättigheter reserverade.</p>
         </div>
     </footer>
+    <!-- ==================== Bootstrap script ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

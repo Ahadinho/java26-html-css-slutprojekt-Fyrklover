@@ -3,6 +3,10 @@
 
 
 <head>
+
+<!-- ==================== Bootstraplänk ==================== -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
@@ -55,75 +59,59 @@
 
 <!-- ==================== NAVIGATION ==================== -->
 
-<nav class="nav" aria-label="Huvudnavigation">
+<nav class="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="auto" aria-label="Huvudnavigation">
+  <div class="container-fluid">
 
-    <!-- Hamburgarmeny för mobil -->
-    <details class="mobilmeny">
-        <summary class="hamburger">
-            <span aria-hidden="true">☰</span>
-            <span class="meny-text">Meny</span>
-        </summary>
+    <!-- Hamburgarknapp för mobil -->
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#huvudmeny" 
+            aria-controls="huvudmeny" 
+            aria-expanded="false" 
+            aria-label="Öppna eller stäng meny">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Länkar som visas när mobilmenyn öppnas -->
-        <ul class="mobil-nav-links">
-
-            <li>
-                <details class="mobil-dropdown">
-                    <summary>Blommor</summary>
-
-                    <ul class="mobil-dropdown-links">
-                        <li><a href="blommor.html">Alla blommor</a></li>
-                        <li><a href="begravning.html">Begravning</a></li>
-                        <li><a href="fodelsedag.html">Födelsedag</a></li>
-                        <li><a href="brollop.html">Bröllop</a></li>
-                        <li><a href="annat.html">Annat</a></li>
-                    </ul>
-                </details>
-            </li>
-
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="galleri.html">Galleri</a></li>
-            <li>
-                <a href="https://www.interflora.se/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Interflora
-                </a>
-            </li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="bestall.html">Beställ</a></li>
-
-        </ul>
-    </details>
-
-    <!-- Vanlig navigation för dator -->
-    <ul class="dator-nav-links">
-
-        <li class="dropdown">
-            <a href="blommor.html">Blommor</a>
-
-            <ul class="dropdown-menu">
-                <li><a href="begravning.html">Begravning</a></li>
-                <li><a href="fodelsedag.html">Födelsedag</a></li>
-                <li><a href="brollop.html">Bröllop</a></li>
-                <li><a href="annat.html">Annat</a></li>
-            </ul>
+    <!-- Menyinnehåll -->
+    <div class="collapse navbar-collapse" id="huvudmeny">
+      <ul class="navbar-nav ms-auto">
+        
+        <!-- Dropdown: Blommor -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="blommor.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Blommor
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="blommor.html">Alla blommor</a></li>
+            <li><a class="dropdown-item" href="begravning.html">Begravning</a></li>
+            <li><a class="dropdown-item" href="fodelsedag.html">Födelsedag</a></li>
+            <li><a class="dropdown-item" href="brollop.html">Bröllop</a></li>
+            <li><a class="dropdown-item" href="annat.html">Annat</a></li>
+          </ul>
         </li>
 
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="galleri.html">Galleri</a></li>
-        <li>
-            <a href="https://www.interflora.se/"
-               target="_blank"
-               rel="noopener noreferrer">
-                Interflora
-            </a>
+        <!-- Övriga Länkar -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Hem</a>
         </li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="bestall.html">Beställ</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="galleri.html">Galleri</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.interflora.se/" target="_blank" rel="noopener noreferrer">Interflora</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kontakt.html">Kontakt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bestall.html">Beställ</a>
+        </li>
 
-    </ul>
+      </ul>
+    </div>
 
+  </div>
 </nav>
 
     </header>
@@ -269,5 +257,7 @@
             <p>&copy; 2026 Iris AB. Alla rättigheter reserverade.</p>
         </div>
     </footer>
+    <!-- ==================== Bootstrap script ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

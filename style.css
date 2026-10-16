@@ -133,6 +133,15 @@ body {
     display: block;
 }
 
+.navbar-toggler {
+  margin: 0 auto;
+}
+
+nav.navbar {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .dropdown-menu a {
     padding: 12px 15px;
 }
