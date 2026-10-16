@@ -168,10 +168,17 @@ body {
     margin-inline: auto;
 }
 
+.home-Backgroundimg {
+    width: calc(100% + clamp(16px, 4vw, 48px) + clamp(16px, 4vw, 48px));
+    max-width: none;
+    margin-left: calc(0px - clamp(16px, 4vw, 48px));
+    margin-right: 0;
+}
+
 .Background-picture {
     position: relative;
     overflow: hidden;
-    aspect-ratio: auto;
+    aspect-ratio: 16/6;
     min-height: 0;
     display: grid;
 }
@@ -201,7 +208,7 @@ body {
     max-width: none;
     color: white;
     text-align: left;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     grid-area: 1 / 1;
     align-self: start;
     margin: 16px;
@@ -1078,12 +1085,6 @@ main .Galleri-bilder .gallery-feature {
 
     .Background-picture > img {
         grid-area: revert;
-    }
-
-    .home-page .category-card:hover,
-    
-        .home-page .category-card:focus-visible {
-        transform: revert;
     }
 
     .insta-gallery,
