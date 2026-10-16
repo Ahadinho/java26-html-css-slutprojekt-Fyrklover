@@ -1557,3 +1557,53 @@ main .Galleri-bilder .gallery-feature {
         gap: 65px 70px;
     }
 }
+/* =========================================
+   HOPPA TILL ÖPPETTIDER
+   ========================================= */
+
+/* Placerar knappen till höger under navbaren */
+.hoppa-till {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 30px;
+    background-color: #f4f6f2;
+}
+
+/* Knappens utseende */
+.hoppa-knapp {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Ändrar färg när muspekaren är över knappen */
+.hoppa-knapp:hover {
+    background-color: #555;
+}
+
+/* Tydligt fokus när man använder tangentbord */
+.hoppa-knapp:focus-visible {
+    outline: 3px solid #b88656;
+    outline-offset: 3px;
+}
+
+/* Gör att sidan rullar mjukt till öppettiderna */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Respekterar användare som vill ha mindre rörelse */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Tar bort extra utrymme ovanför herobilden på startsidan */
+main.main {
+    padding-top: 0;
+}
