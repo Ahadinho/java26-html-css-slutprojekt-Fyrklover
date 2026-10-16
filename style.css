@@ -1813,3 +1813,169 @@ main.main {
         animation: none;
     }
 }
+
+
+/* =========================================
+   NY TILLGÄNGLIG HAMBURGARMENY
+   ========================================= */
+
+/* Mobil är standard */
+
+/* Datorns navigation är dold på mobil */
+.nav .dator-nav-links {
+    display: none;
+}
+
+/* Hamburgarmenyn visas på mobil */
+.nav .mobilmeny {
+    display: block;
+    width: 100%;
+}
+
+/* Själva menyknappen */
+.nav .mobilmeny > .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 20px;
+    color: black;
+    background-color: #fffafa;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Tar bort webbläsarens standardpil */
+.nav .mobilmeny > .hamburger::-webkit-details-marker {
+    display: none;
+}
+
+/* Byter ikon när menyn är öppen */
+.nav .mobilmeny[open] > .hamburger span:first-child {
+    display: none;
+}
+
+.nav .mobilmeny[open] > .hamburger::before {
+    content: "✕";
+    font-size: 24px;
+}
+
+/* Länkarna ligger lodrätt */
+.nav .mobil-nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #fffafa;
+}
+
+/* Menylänkar */
+.nav .mobil-nav-links a,
+.nav .mobil-dropdown > summary {
+    display: block;
+    padding: 14px 20px;
+    color: black;
+    background-color: #fffafa;
+    border: 1px solid #d6d0d0;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Blommor fungerar som en undermeny */
+.nav .mobil-dropdown > summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.nav .mobil-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav .mobil-dropdown > summary::after {
+    content: " ▾";
+}
+
+.nav .mobil-dropdown[open] > summary::after {
+    content: " ▴";
+}
+
+/* Undermenyn */
+.nav .mobil-dropdown-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav .mobil-dropdown-links a {
+    padding-left: 40px;
+    background-color: #f2f2f2;
+}
+
+/* Hover */
+.nav .mobil-nav-links a:hover,
+.nav .mobil-dropdown > summary:hover,
+.nav .mobilmeny > .hamburger:hover {
+    background-color: #eaeaea;
+}
+
+/* Tydligt fokus vid tangentbordsnavigering */
+.nav .mobilmeny summary:focus-visible,
+.nav .mobil-nav-links a:focus-visible,
+.nav .dator-nav-links a:focus-visible {
+    outline: 3px solid #b88656;
+    outline-offset: -3px;
+}
+
+/* =========================================
+   DATOR – FRÅN 769 PIXLAR
+   ========================================= */
+
+@media (min-width: 769px) {
+
+    /* Dölj mobilmenyn helt */
+    .nav .mobilmeny {
+        display: none;
+    }
+
+    /* Visa vanliga navbaren */
+    .nav .dator-nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 3px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Dropdown på dator */
+    .nav .dator-nav-links .dropdown {
+        position: relative;
+    }
+
+    .nav .dator-nav-links .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 180px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background-color: white;
+        z-index: 20;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Öppna dropdown med mus eller tangentbord */
+    .nav .dator-nav-links .dropdown:hover > .dropdown-menu,
+    .nav .dator-nav-links .dropdown:focus-within > .dropdown-menu {
+        display: block;
+    }
+}

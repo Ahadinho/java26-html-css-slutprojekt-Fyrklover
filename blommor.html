@@ -48,24 +48,56 @@
 
         <!-- ==================== NAVIGATION ==================== -->
 
-<nav class="nav">
 
-    <!-- Checkbox som styr hamburgarmenyn -->
-    <input type="checkbox" id="menu-toggle">
+<!-- ==================== NAVIGATION ==================== -->
 
-    <!-- Hamburgarikon -->
-    <label for="menu-toggle" class="hamburger">
-        ☰
-    </label>
+<nav class="nav" aria-label="Huvudnavigation">
 
-    <!-- Navigeringslänkar -->
-    <ul class="nav-links">
+    <!-- Hamburgarmeny för mobil -->
+    <details class="mobilmeny">
+        <summary class="hamburger">
+            <span aria-hidden="true">☰</span>
+            <span class="meny-text">Meny</span>
+        </summary>
 
-        <!-- Dropdown för Blommor -->
+        <!-- Länkar som visas när mobilmenyn öppnas -->
+        <ul class="mobil-nav-links">
+
+            <li>
+                <details class="mobil-dropdown">
+                    <summary>Blommor</summary>
+
+                    <ul class="mobil-dropdown-links">
+                        <li><a href="blommor.html">Alla blommor</a></li>
+                        <li><a href="Begravning.html">Begravning</a></li>
+                        <li><a href="födelsedag.html">Födelsedag</a></li>
+                        <li><a href="Bröllop.html">Bröllop</a></li>
+                        <li><a href="annat.html">Annat</a></li>
+                    </ul>
+                </details>
+            </li>
+
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="Galleri.html">Galleri</a></li>
+            <li>
+                <a href="https://www.interflora.se/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Interflora
+                </a>
+            </li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+            <li><a href="Beställ.html">Beställ</a></li>
+
+        </ul>
+    </details>
+
+    <!-- Vanlig navigation för dator -->
+    <ul class="dator-nav-links">
+
         <li class="dropdown">
             <a href="blommor.html">Blommor</a>
 
-            <!-- Undermenyn -->
             <ul class="dropdown-menu">
                 <li><a href="Begravning.html">Begravning</a></li>
                 <li><a href="födelsedag.html">Födelsedag</a></li>
@@ -73,17 +105,23 @@
                 <li><a href="annat.html">Annat</a></li>
             </ul>
         </li>
+
         <li><a href="index.html">Hem</a></li>
         <li><a href="Galleri.html">Galleri</a></li>
         <li>
-            <a href="https://www.interflora.se/" target="_blank">
+            <a href="https://www.interflora.se/"
+               target="_blank"
+               rel="noopener noreferrer">
                 Interflora
             </a>
         </li>
         <li><a href="Kontakt.html">Kontakt</a></li>
         <li><a href="Beställ.html">Beställ</a></li>
+
     </ul>
+
 </nav>
+
     </header>
     <main>
 

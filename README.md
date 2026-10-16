@@ -98,5 +98,6 @@ Gjorde html och css för Beställ.html, annat.html, begravning.html, beställ.ht
 Header och nav
 gjorde css för kontakt.html
 gjort hoppa-till knappar
+jobbat med animationer.
 
 Arslan:
