@@ -46,7 +46,10 @@ Några blider på blommor från olika sidor
 
 Kort om Mobilvy och Darkmode:
 
-Work in progress
+Layouten ändras med att allt blir mer kompakt och en Hamburgarmeny samlar ihop navigerinsmenyerna. Footer layouten tar allt från vänster till höger, och visar det från topp nedåt. Samma ändrig sker på kontakta oss sidan för kontaktinfon och hemsidans tillverkare. På beställ sidan så hamnar dem 4 små menyer under beställnings meny
+
+Gällande Darkmode....
+
 
 Ansvarsområden och jobb
 
