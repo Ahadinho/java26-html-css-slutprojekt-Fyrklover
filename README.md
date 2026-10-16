@@ -97,5 +97,6 @@ Letade upp länkar för samarbetspartners, facebook och instagram
 Gjorde html och css för Beställ.html, annat.html, begravning.html, beställ.html, blommor.html, bröllop.html, födelsedag.html
 Header och nav
 gjorde css för kontakt.html
+gjort hoppa-till knappar
 
 Arslan:

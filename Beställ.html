@@ -85,7 +85,10 @@
 </nav>
     </header>
     <main class="bestall-main">
-        <form class="bestall-form">
+        <!-- Layout för formuläret och kategoribilderna -->
+        <div class="bestall-layout">
+
+            <form class="bestall-form">
             <h1>Beställning</h1>
 
             <!-- Kontaktuppgifter -->
@@ -148,7 +151,46 @@
 
             <!-- Skicka -->
              <button type="submit">Skicka in</button> 
-        </form>
+            </form>
+
+            <!-- =================== KATEGORIBILDER ==================== -->
+
+            <!-- Bilderna visas till höger om formuläret på dator -->
+            <aside class="bestall-kategorier" aria-label="Blomkategorier">
+
+                <!-- Begravning -->
+                <a href="Begravning.html" class="bestall-kategori">
+                    <img src="images/1. startsida/startsida.begravning.jpg"
+                         alt="Begravningsblommor">
+                    <span>Begravning</span>
+                </a>
+
+                <!-- Födelsedag -->
+                <a href="födelsedag.html" class="bestall-kategori">
+                    <img src="images/1. startsida/startsida.födelsedag.jpg"
+                         alt="Födelsedagsblommor">
+                    <span>Födelsedag</span>
+                </a>
+
+                <!-- Bröllop -->
+                <a href="Bröllop.html" class="bestall-kategori">
+                    <img src="images/1. startsida/startsida.bröllop.jpg"
+                         alt="Bröllopsblommor">
+                    <span>Bröllop</span>
+                </a>
+
+                <!-- Annat -->
+                <a href="annat.html" class="bestall-kategori">
+                    <img src="images/1. startsida/startsida.annat.jpg"
+                         alt="Andra blomsterarrangemang">
+                    <span>Annat</span>
+                </a>
+
+            </aside>
+
+        </div>
+        <!-- Slut på bestall-layout -->
+
     </main>
     <footer class="footer">
         <div class="footer-content">

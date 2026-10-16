@@ -1640,3 +1640,107 @@ main.main {
     outline: 3px solid #b88656;
     outline-offset: 3px;
 }
+
+/* =========================================
+   KATEGORIBILDER PÅ BESTÄLLNINGSSIDAN
+   ========================================= */
+
+/* Håller formuläret centrerat på sidan */
+.bestall-main .bestall-layout {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Behåller formulärets befintliga storlek */
+.bestall-main .bestall-layout .bestall-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Kategorierna visas under formuläret på mobil */
+.bestall-kategorier {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 150px;
+}
+
+/* Varje kategori får en tydlig vit ram */
+.bestall-kategori {
+    display: block;
+    width: 100%;
+    border: 5px solid white;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Bildernas storlek */
+.bestall-kategori img {
+    display: block;
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+}
+
+/* Texten under varje bild */
+.bestall-kategori span {
+    display: block;
+    padding: 8px 4px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+}
+
+/* Markering när muspekaren är över en kategori */
+.bestall-kategori:hover {
+    border-color: #e4c5a5;
+}
+
+/* Tydlig markering vid tangentbordsnavigering */
+.bestall-kategori:focus-visible {
+    outline: 3px solid #b88656;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   MOBIL OCH MINDRE SKÄRMAR
+   ========================================= */
+
+@media (max-width: 899px) {
+
+    /* Formuläret och bilderna ligger under varandra */
+    .bestall-main .bestall-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    /* Kategorierna visas i två kolumner på mobil */
+    .bestall-kategorier {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* =========================================
+   DATOR
+   ========================================= */
+
+@media (min-width: 900px) {
+
+    /* Formuläret förblir centrerat.
+       Kategorierna placeras till höger utan
+       att flytta formuläret åt vänster. */
+    .bestall-kategorier {
+        position: absolute;
+        left: calc(50% + 200px + 35px);
+        top: 0;
+    }
+}
