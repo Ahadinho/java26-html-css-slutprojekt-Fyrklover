@@ -20,67 +20,38 @@ Github : https://github.com/Ahadinho/java26-html-css-slutprojekt-Fyrklover
 Github projects(kanban): https://github.com/users/Ahadinho/projects/1
 
 
-Logga gjord av Johanna: <img src="images/Logga.png" width="60" height="50">
+Logga gjord av Johanna: 
 
-Favicion gjord av Johanna: <img src="images/favicon.png" width="60" height="50">
+<img src="images/Logga.png" width="60" height="50">
+
+Favicion gjord av Johanna: 
+
+<img src="images/favicon.png" width="60" height="50">
 
 Skiss design av Johanna:
 
-<img src="images/Skiss/Startsidan.png" width="80" height="80">
-<img src="images/Skiss/Strtsidan - med animation.png" width="80" height="80">
-<img src="images/Skiss/Startsidan - mobilview.png" width="80" height="80">
-<img src="images/Skiss/kontaka oss.png" width="80" height="80">
-<img src="images/Skiss/kontaka oss - mobilview.png" width="80" height="80">
-<img src="images/Skiss/Födelsedag.png" width="80" height="80">
-<img src="images/Skiss/Födelsedag - mobilview.png" width="80" height="80">
-<img src="images/Skiss/Bröllop.png" width="80" height="80">
-<img src="images/Skiss/Bröllop - mobilview.png" width="80" height="80">
-<img src="images/Skiss/beställ.png" width="80" height="80">
-<img src="images/Skiss/beställ - mobilview.png" width="80" height="80">
-<img src="images/Skiss/Begravning.png" width="80" height="80">
-<img src="images/Skiss/Begravning - mobilview.png" width="80" height="80">
-<img src="images/Skiss/Annat.png" width="80" height="80">
-<img src="images/Skiss/Annat - mobilview.png" width="80" height="80">
+<img src="images/Skiss/Startsidan.png" width="80" height="80"><img src="images/Skiss/Strtsidan - med animation.png" width="80" height="80"><img src="images/Skiss/Startsidan - mobilview.png" width="80" height="80"><img src="images/Skiss/kontaka oss.png" width="80" height="80"><img src="images/Skiss/kontaka oss - mobilview.png" width="80" height="80"><img src="images/Skiss/Födelsedag.png" width="80" height="80"><img src="images/Skiss/Födelsedag - mobilview.png" width="80" height="80"><img src="images/Skiss/Bröllop.png" width="80" height="80"><img src="images/Skiss/Bröllop - mobilview.png" width="80" height="80"><img src="images/Skiss/beställ.png" width="80" height="80"><img src="images/Skiss/beställ - mobilview.png" width="80" height="80"><img src="images/Skiss/Begravning.png" width="80" height="80"><img src="images/Skiss/Begravning - mobilview.png" width="80" height="80"><img src="images/Skiss/Annat.png" width="80" height="80"><img src="images/Skiss/Annat - mobilview.png" width="80" height="80">
 
 Kontakta oss iconer och Sociala medier iconer, och företag från Wikipedia
 
-<img src="images/3. kontakt/person.png.png" width="50" height="50">
-<img src="images/1. startsida/facebook.icon.png" width="60" height="50">
-<img src="images/1. startsida/instagram.icon.png" width="60" height="50">
-<img src="images/1. startsida/interflora.logga.avif" width="60" height="50">
+<img src="images/3. kontakt/person.png.png" width="50" height="50"><img src="images/1. startsida/facebook.icon.png" width="60" height="50"><img src="images/1. startsida/instagram.icon.png" width="60" height="50"><img src="images/1. startsida/interflora.logga.avif" width="60" height="50">
 
 Bilder på blommor och bild på ägare från https://arlovsblomsterhandel.se/ : 
 
-<img src="images/1. startsida/startsida.annat.jpg" width="60" height="50">
-<img src="images/1. startsida/startsida.begravning.jpg" width="60" height="50">
-<img src="images/1. startsida/startsida.bröllop.jpg" width="60" height="50">
-<img src="images/1. startsida/startsida.födelsedag.jpg" width="60" height="50">
+<img src="images/1. startsida/startsida.annat.jpg" width="60" height="50"><img src="images/1. startsida/startsida.begravning.jpg" width="60" height="50"><img src="images/1. startsida/startsida.bröllop.jpg" width="60" height="50"><img src="images/1. startsida/startsida.födelsedag.jpg" width="60" height="50">
 
-Många blider på blommor från olika sidor 
+Några blider på blommor från olika sidor 
 
-<img src="images/2. galleri/8F977E4B-05E1-4646-B3C1-8B5670C8C08A.jpg" width="60" height="50">
-<img src="images/2. galleri/470140364_122194561982230377_5511616118677602819_n.jpg" width="60" height="50">
-
-<img src="images/4. begravning/1.jpg" width="60" height="50">
-<img src="images/4. begravning/2.jpg" width="60" height="50">
-
-<img src="images/5. födelsedag/1.jpg" width="60" height="50">
-<img src="images/5. födelsedag/2.jpg" width="60" height="50">
-
-<img src="images/6. bröllop/arrangemang 1.png" width="60" height="50">
-<img src="images/6. bröllop/arrangemang 2.jpg" width="60" height="50">
-
-<img src="images/7. annat/annat 1.jpg" width="60" height="50">
-<img src="images/7. annat/annat 2.jpg" width="60" height="50">
+<img src="images/2. galleri/8F977E4B-05E1-4646-B3C1-8B5670C8C08A.jpg" width="60" height="50"><img src="images/2. galleri/470140364_122194561982230377_5511616118677602819_n.jpg" width="60" height="50"><img src="images/4. begravning/1.jpg" width="60" height="50"><img src="images/4. begravning/2.jpg" width="60" height="50"><img src="images/5. födelsedag/1.jpg" width="60" height="50"><img src="images/5. födelsedag/2.jpg" width="60" height="50"><img src="images/6. bröllop/arrangemang 1.png" width="60" height="50"><img src="images/6. bröllop/arrangemang 2.jpg" width="60" height="50"><img src="images/7. annat/annat 1.jpg" width="60" height="50"><img src="images/7. annat/annat 2.jpg" width="60" height="50">
 
 Kort om Mobilvy och Darkmode:
 
 Work in progress
 
-Ansvarsområden:
+Ansvarsområden och jobb
 
 Ahad:
-Jobbat på Kontakt.html, ReadME fil, Infogning av bilder på skiss
+Jobbat på Kontakt.html, README.md filen, Infogning av bilder på skiss, och lite hmtl för footer
 
 Yoonis:
 Foundation
